@@ -7,7 +7,7 @@ from dotenv import load_dotenv
 load_dotenv()  # Carga las variables de entorno desde .env
 
 app = Flask(__name__, template_folder='./templates')
-CORS(app, resources={r"/*": {"origins": "*"}}) # Habilita CORS para todos los endpoints
+CORS(app, resources={r"/*": {"origins": "*", "methods": ["GET", "POST", "OPTIONS"]}})# Habilita CORS para todos los endpoints
 
 @app.route('/')
 def home():
@@ -24,7 +24,7 @@ def servicios():
 # Configuración de Flask-Mail con variables de entorno
 app.config['MAIL_SERVER'] = os.getenv('MAIL_SERVER')
 app.config['MAIL_PORT'] = int(os.getenv('MAIL_PORT', 587))
-app.config['MAIL_USE_SSL'] = os.getenv('MAIL_USE_SSL', 'False') == 'False'
+app.config['MAIL_USE_TLS'] = os.getenv('MAIL_USE_TLS', 'True') == 'True'
 app.config['MAIL_USERNAME'] = os.getenv('MAIL_USERNAME')
 app.config['MAIL_PASSWORD'] = os.getenv('MAIL_PASSWORD')
 app.config['MAIL_DEFAULT_SENDER'] = os.getenv('MAIL_DEFAULT_SENDER')
