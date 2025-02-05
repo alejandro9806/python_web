@@ -7,7 +7,7 @@ from dotenv import load_dotenv
 load_dotenv()  # Carga las variables de entorno desde .env
 
 app = Flask(__name__, template_folder='./templates')
-CORS(app)  # Habilita CORS para todos los endpoints
+CORS(app, resources={r"/*": {"origins": "*"}})  # Habilita CORS para todos los endpoints
 
 @app.route('/')
 def home():
