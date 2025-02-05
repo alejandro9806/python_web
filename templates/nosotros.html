@@ -1,0 +1,426 @@
+<html lang="es">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0"/>
+  <title>
+   Nosotros | Trujillo y Asociados
+  </title>
+  <script src="https://cdn.tailwindcss.com">
+  </script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&amp;family=Open+Sans:wght@400;600&amp;display=swap" rel="stylesheet"/>
+  <style>
+   body {
+            font-family: 'Open Sans', sans-serif;
+            line-height: 1.6;
+            color: #1f2937;
+        }
+
+        h1, h2, h3, .logo-text {
+            font-family: 'Cormorant Garamond', serif;
+        }
+
+        .header {
+            background-color: rgba(31, 41, 55, 0.95);
+            backdrop-filter: blur(5px);
+            color: #ffffff;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            transition: all 0.3s ease;
+        }
+
+        .header.scrolled {
+            background-color: rgba(31, 41, 55, 0.98);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .nav-link {
+            position: relative;
+            color: #ffffff;
+            text-decoration: none;
+            padding: 0.5rem;
+            transition: color 0.3s ease;
+        }
+
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: 0;
+            left: 50%;
+            background-color: #3b82f6;
+            transition: all 0.3s ease;
+        }
+
+        .nav-link:hover::after {
+            width: 100%;
+            left: 0;
+        }
+
+        .hero {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            text-align: center;
+            position: relative;
+            margin-top: 0;
+            background-color: rgba(0, 0, 0, 0.6);
+        }
+
+        .hero img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -1;
+            filter: brightness(0.5);
+        }
+
+        .hero h1 {
+            font-size: 4rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeInUp 1s ease forwards;
+        }
+
+        .hero p {
+            font-size: 1.5rem;
+            max-width: 800px;
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeInUp 1s ease 0.3s forwards;
+        }
+
+        @keyframes fadeInUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .value-box {
+            background: #f3f4f6;
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        .value-box:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+        }
+
+        .contact {
+            background-color: #f8fafc;
+            padding: 4rem 2rem;
+        }
+
+        .contact .info, .contact .location {
+            background-color: white;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        .contact .info:hover, .contact .location:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+        }
+
+        .footer {
+            background-color: #1f2937;
+            color: white;
+            padding: 4rem 2rem 2rem;
+        }
+
+        .social-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            transition: all 0.3s ease;
+        }
+
+        .social-link:hover {
+            color: #3b82f6;
+            transform: translateY(-2px);
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .hero p {
+                font-size: 1.2rem;
+                padding: 0 1rem;
+            }
+
+            .nav {
+                background-color: rgba(31, 41, 55, 0.98);
+                padding: 1rem;
+            }
+        }
+  </style>
+ </head>
+ <body>
+  <header class="header">
+   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
+    <div class="flex justify-between items-center">
+     <div class="flex items-center space-x-3">
+      <img alt="Logo de Trujillo y Asociados Law Group" class="w-12 h-12 rounded-full" height="48" src="./static/img/TRUJILLO Y ASOCIADOS LAW.png" width="48"/>
+      <span class="logo-text text-xl font-bold">
+       Trujillo y Asociados Law Group
+      </span>
+     </div>
+     <nav class="hidden md:flex items-center space-x-6">
+      <a class="nav-link" href="{{url_for('home')}}">
+       Inicio
+      </a>
+      <a class="nav-link text-blue-400" href="#nosotros">
+       Nosotros
+      </a>
+      <a class="nav-link" href="{{url_for('servicios')}}">
+       Servicios
+      </a>
+      <a class="nav-link" href="{{url_for('home')}}#contacto">
+       Contacto
+      </a>
+      <a class="nav-link" href="#blog">
+       Blog
+      </a>
+      <a class="bg-blue-600 text-white px-6 py-2 rounded-full hover:bg-blue-700 transition duration-300" href="#consulta">
+       Consulta Gratis
+      </a>
+     </nav>
+     <button class="md:hidden text-white">
+      <i class="fas fa-bars text-2xl">
+      </i>
+     </button>
+    </div>
+   </div>
+  </header>
+  <section class="hero">
+   <img alt="Imagen de fondo de un abogado trabajando en su oficina con documentos legales y una computadora portátil" height="1080" src="./static/img/derechocomercial.jpg" width="1920"/>
+
+   <h1>
+    ¿Quiénes Somos?
+    </h1>
+    <p class="mt-4">
+        Expertos legales comprometidos con tu tranquilidad y justicia
+    </p>
+    
+  </section>
+  <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+   <section class="mb-20 bg-gray-100 py-12">
+    <div class="container mx-auto p-4">
+     <h1 class="text-4xl font-bold mb-8">
+      Nuestra Historia
+     </h1>
+     <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+      <div>
+       <h2 class="text-2xl font-bold mb-4">
+        Fundación
+       </h2>
+       <p>
+        Trujillo y Asociados se fundó con el objetivo de brindar asesoría legal y acompañamiento de calidad a empresas y particulares. El equipo fundador, con amplia experiencia en el sector legal, buscó construir una firma que se diferenciara por su compromiso con la ética y la búsqueda de soluciones personalizadas.
+       </p>
+      </div>
+      <div>
+       <h2 class="text-2xl font-bold mb-4">
+        Crecimiento
+       </h2>
+       <p>
+        Desde su inicio, Trujillo y Asociados ha crecido de forma constante, ampliando sus servicios y especialidades para atender las necesidades de un mercado cada vez más complejo. En la actualidad, la firma cuenta con un equipo multidisciplinario de abogados altamente calificados y especializados en diferentes áreas del derecho.
+       </p>
+      </div>
+     </div>
+    </div>
+    <div class="grid md:grid-cols-3 gap-8">
+     <div class="value-box bg-blue-50">
+      <div class="flex items-center mb-4">
+       <i class="fas fa-bullseye text-blue-600 text-3xl mr-3">
+       </i>
+       <h3 class="text-2xl font-bold">
+        Nuestra Misión
+       </h3>
+      </div>
+      <p class="text-gray-700">
+        Ofrecer asesoría legal de excelencia, personalizada y accesible, garantizando soluciones efectivas y éticas. Nos comprometemos a brindar un servicio innovador y de alto nivel, respaldado por un equipo de expertos que trabajan con integridad y profesionalismo.
+</p>
+      </p>
+     </div>
+     <div class="value-box bg-green-50">
+      <div class="flex items-center mb-4">
+       <i class="fas fa-eye text-green-600 text-3xl mr-3">
+       </i>
+       <h3 class="text-2xl font-bold">
+        Nuestra Visión
+       </h3>
+      </div>
+      <p class="text-gray-700">
+        Ser la firma legal de referencia, destacada por su ética, profesionalismo y enfoque humano. Especializados en derecho laboral, civil y comercial, brindamos soluciones integrales a empresas, emprendedores y familias. Nos comprometemos a generar un impacto positivo en la sociedad y a consolidarnos como líderes en el sector.
+      </p>
+     </div>
+     <div class="value-box bg-yellow-100">
+      <div class="flex items-center mb-4">
+       <i class="fas fa-star text-yellow-600 text-3xl mr-3">
+       </i>
+       <h3 class="text-2xl font-bold">
+        Nuestros Valores
+       </h3>
+      </div>
+      <ul class="space-y-3 text-gray-700">
+       <li>
+        <strong>
+         Integridad:
+        </strong>
+        Actuamos con honestidad y transparencia
+       </li>
+       <li>
+        <strong>
+         Compromiso:
+        </strong>
+        Dedicación total a nuestros clientes
+       </li>
+       <li>
+        <strong>
+         Excelencia:
+        </strong>
+        Búsqueda continua de la perfección
+       </li>
+      </ul>
+     </div>
+    </div>
+   </section>
+  </main>
+  <section class="contact" id="contacto">
+   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="grid md:grid-cols-2 gap-8">
+     <div class="info p-8">
+      <h3 class="text-2xl font-bold mb-6">
+       Información de Contacto
+      </h3>
+      <ul class="space-y-4">
+       <li class="flex items-center">
+        <i class="fas fa-phone-alt text-blue-600 text-xl w-8">
+        </i>
+        <span>
+         +57 304 450 1171
+        </span>
+       </li>
+       <li class="flex items-center">
+        <i class="fas fa-envelope text-blue-600 text-xl w-8">
+        </i>
+        <a class="hover:text-blue-600 transition duration-300" href="mailto:contacto@trujillolaw.com">
+         contacto@trujillolaw.com
+        </a>
+       </li>
+       <li class="flex items-center">
+        <i class="fas fa-map-marker-alt text-blue-600 text-xl w-8">
+        </i>
+        <span>
+         Calle 16A #26-24, Manizales, Caldas
+        </span>
+       </li>
+      </ul>
+     </div>
+     <div class="location p-8">
+      <h3 class="text-2xl font-bold mb-6">
+       Nuestra Ubicación
+      </h3>
+      <div class="rounded-lg overflow-hidden shadow-lg">
+       <iframe allowfullscreen="" height="300" loading="lazy" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1987.1200441869669!2d-75.52230406032716!3d5.064791400000008!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e476f1032dcf6db%3A0xe987a1712fbfb3c0!2sCl.%2016a%20%232624%2C%20Manizales%2C%20Caldas!5e0!3m2!1ses-419!2sco!4v1736538570920!5m2!1ses-419!2sco" style="border:0;" width="100%">
+       </iframe>
+      </div>
+     </div>
+    </div>
+   </div>
+  </section>
+  <footer class="footer">
+   <div class="max-w-7xl mx-auto grid md:grid-cols-3 gap-8">
+    <div>
+     <h3 class="text-xl font-bold mb-4">
+      Trujillo y Asociados
+     </h3>
+     <p class="text-gray-300">
+      Excelencia legal a su servicio
+     </p>
+    </div>
+    <div>
+     <h3 class="text-xl font-bold mb-4">
+      Contacto
+     </h3>
+     <p class="text-gray-300">
+      contacto@trujillolaw.com
+     </p>
+     <p class="text-gray-300">
+      +57 304 450 1171
+     </p>
+    </div>
+    <div>
+     <h3 class="text-xl font-bold mb-4">
+      Síguenos
+     </h3>
+     <div class="flex space-x-6">
+      <a class="social-link" href="#">
+       <i class="fab fa-linkedin">
+       </i>
+       <span>
+        LinkedIn
+       </span>
+      </a>
+      <a class="social-link" href="#">
+       <i class="fab fa-facebook">
+       </i>
+       <span>
+        Facebook
+       </span>
+      </a>
+      <a class="social-link" href="#">
+       <i class="fab fa-twitter">
+       </i>
+       <span>
+        Twitter
+       </span>
+      </a>
+     </div>
+    </div>
+   </div>
+   <div class="text-center mt-16 text-gray-400">
+    <p>
+     © 2025 Trujillo y Asociados Law Group. Todos los derechos reservados.
+    </p>
+   </div>
+  </footer>
+  <script>
+   // Header scroll effect
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('.header');
+            if (window.scrollY > 50) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        });
+
+        // Mobile menu toggle
+        const menuButton = document.querySelector('button');
+        const nav = document.querySelector('nav');
+        
+        menuButton.addEventListener('click', () => {
+            nav.classList.toggle('hidden');
+        });
+  </script>
+ </body>
+</html>
