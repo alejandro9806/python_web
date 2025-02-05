@@ -1,4 +1,4 @@
 #nixpacks.toml
 
 [start]
-cmd = "guniocorn app:app"
+cmd = "guniocorn crear_app:app"
