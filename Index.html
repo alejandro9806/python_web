@@ -1177,7 +1177,7 @@ document.getElementById('contactForm').addEventListener('submit', async function
 
     try {
         // Enviar datos al backend
-        const response = await fetch(('http://192.168.20.58:5000/send-email','http://127.0.0.1:5000/send-email'), {
+        const response = await fetch('http://127.0.0.1:5000/send-email', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/x-www-form-urlencoded',
