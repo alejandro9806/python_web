@@ -1,0 +1,376 @@
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&amp;family=Open+Sans:wght@400;600&amp;display=swap" rel="stylesheet"/>
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.js"></script>
+  <title>
+   Servicios - Trujillo y Asociados Law Group
+  </title>
+  <script src="https://cdn.tailwindcss.com">
+  </script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+  <style>
+    
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    
+    body {
+        font-family: 'Poppins', sans-serif;
+        color: #fff;
+    }
+
+    :root {
+        --color-primary: #0073e6; /* Azul profesional */
+        --color-secondary: #f4f4f4; /* Gris claro */
+        --color-accent: #ff6f61; /* Naranja llamativo para botones */
+        --color-text: #333; /* Texto oscuro */
+        --color-light: #fff; /* Blanco para fondos */
+    }
+   .fade-in {
+            animation: fadeIn 2s ease-in-out;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        /* Estilos para la sección Hero */
+        .hero-section {
+            position: relative;
+            width: 100%;
+            height: 100vh; /* El video ocupará toda la altura de la pantalla */
+            overflow: hidden;
+        }
+        
+        /* Estilos para el video */
+        #hero-video {
+            
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 100%;
+            height: 100%;
+            object-fit: cover; /* Asegura que el video cubra todo el espacio sin deformarse */
+            transform: translate(-50%, -50%);
+            z-index: 1; /* El video está detrás del contenido */
+            
+        }
+        
+        /* Estilos para el contenido encima del video */
+        .hero-content {
+            background-color: rgba(0, 0, 0, 0.5);
+            padding: 4rem;
+            border-radius: 6px;
+            height: 100vh;
+            position: relative;
+            z-index: 2;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: center;
+            height: 100%;
+            text-align: left;
+            color: white;
+        
+        }
+        
+        .hero-content h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            line-height: 1.2;
+            
+        }
+        
+        .hero-content p {
+            font-size: 1.5rem;
+            margin-bottom: 2rem;
+            color: white;
+        }
+        
+        .cta-button {
+            display: inline-block;
+            padding: 1rem 2rem;
+            background-color: #ff6f61; /* Color llamativo para el botón */
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+        
+        .cta-button:hover {
+            background-color: #e05d50; /* Cambio de color al pasar el cursor */
+        }
+  </style>
+ </head>
+ <body class="bg-gray-100 text-gray-800">
+  <header class="bg-gray-800 text-white py-4 fixed w-full z-10">
+   <div class="container mx-auto flex justify-between items-center px-6">
+    <div class="flex items-center">
+     <img alt="Logo of Trujillo y Asociados Law Group" class="h-10 w-10 mr-3" src="https://storage.googleapis.com/a1aa/image/je7VfSxeDzKhjoUimlTVA5dHmmXeC3Qof84ykRxRTnDhMb9gC.jpg"/>
+     <span class="font-semibold text-xl">
+      Trujillo y Asociados Law Group
+     </span>
+    </div>
+    <nav class="hidden md:flex space-x-4">
+     <a class="hover:text-blue-400" href="{{url_for('home')}}">
+      Inicio
+     </a>
+     <a class="hover:text-blue-400" href="{{url_for('nosotros')}}">
+      Nosotros
+     </a>
+     <a class="text-blue-400" href="#">
+      Servicios
+     </a>
+     <a class="hover:text-blue-400" href="{{url_for('home')}}#contacto">
+      Contáctanos
+     </a>
+     <a class="hover:text-blue-400" href="#">
+      Blog
+     </a>
+     <a class="hover:text-blue-400" href="https://wa.me/573044501171">
+      Consulta Gratis
+     </a>
+    </nav>
+    <div class="md:hidden">
+     <button class="text-white focus:outline-none" id="menu-btn">
+      <i class="fas fa-bars">
+      </i>
+     </button>
+    </div>
+   </div>
+   <nav class="hidden md:hidden bg-gray-800 text-white" id="mobile-menu">
+    <a class="block px-4 py-2 hover:bg-gray-700" href="{{url_for('home')}}">
+     Inicio
+    </a>
+    <a class="block px-4 py-2 hover:bg-gray-700" href="{{url_for('nosotros')}}">
+     Nosotros
+    </a>
+    <a class="block px-4 py-2 bg-gray-700" href="#">
+     Servicios
+    </a>
+    <a class="block px-4 py-2 hover:bg-gray-700" href="{{url_for('home')}}#contacto">
+     Contáctanos
+    </a>
+    <a class="block px-4 py-2 hover:bg-gray-700" href="#">
+     Blog
+    </a>
+    <a class="block px-4 py-2 hover:bg-gray-700" href="https://wa.me/573044501171">
+     Consulta Gratis
+    </a>
+   </nav>
+  </header>
+  <main class="container mx-auto py-24 px-6">
+
+    <section id="Hero">
+        <div class="hero-section">
+            <!-- Video de fondo -->
+            <video autoplay muted loop id="hero-video">
+                <source src="./static/img/vid1.mp4" type="video/mp4">
+            Tu navegador no soporta videos HTML5.
+            </video>
+            <!-- Contenido encima del video -->
+            <div class="hero-content">
+                <h1>Protegemos tus derechos,<br>construimos tu futuro.</h1>
+                <p>Somos un equipo comprometido con tu éxito y tranquilidad.</p>
+                <a href="#contacto" class="cta-button">Consulta Gratis</a>
+            </div>
+        </div>
+
+        
+    </section>
+
+   <section class="text-center mb-12 p-6 ">
+    <h1 class="text-4xl font-bold mb-4 fade-in">
+     Nuestros Servicios
+
+    </h1>
+    <p class="text-lg text-gray-600 fade-in">
+     En Trujillo y Asociados Law Group, nos enorgullece ofrecer un portafolio integral de servicios legales diseñados para abordar una amplia variedad de necesidades. Nuestro equipo altamente calificado combina experiencia, dedicación y un enfoque personalizado para garantizar que cada cliente reciba la mejor asesoría y representación. Ya sea que necesite asistencia en temas corporativos, familiares, civiles, ejecutivos o relacionados con accidentes, estamos aquí para ayudarle a proteger sus derechos, resolver disputas y alcanzar sus objetivos legales de manera efectiva. Con nosotros, usted no solo obtiene un abogado, sino un aliado comprometido con su éxito y tranquilidad.
+    </p>
+   </section>
+   <!-- Derecho Comercial -->
+   <section class="mb-12 fade-in bg-gray-200 p-6 rounded-lg shadow-lg">
+    <div class="bg-blue rounded-lg shadow-lg overflow-hidden">
+     <img alt="Image representing Derecho Comercial" class="w-full h-48 object-cover" src="./static/img/derechocomercial.jpg"/>
+     <div class="p-6">
+      <h2 class="text-2xl font-semibold mb-2">
+       Derecho Comercial
+      </h2>
+      <p class="text-gray-600 mb-4">
+       Brindamos asesoría legal a consumidores en materia de derecho comercial, protegiendo sus derechos en relaciones con empresas y proveedores. Nuestro objetivo es garantizar que sus intereses estén resguardados en un entorno legal justo y seguro.
+      </p>
+      <p class="text-gray-600 mb-4">
+       Ejemplos de nuestros servicios en derecho comercial incluyen:
+      </p>
+      <ul class="list-disc list-inside text-gray-600 mb-4">
+       <li>
+        Defensa del consumidor: Asesoramos y representamos en casos de publicidad engañosa, cláusulas abusivas y otros conflictos con empresas.
+       </li>
+       <li>
+        Revisión y negociación de contratos: Le ayudamos a entender y negociar términos contractuales para evitar condiciones desfavorables.
+       </li>
+       <li>
+        Resolución de disputas comerciales: Lo representamos en reclamaciones por incumplimientos, garantías y otros conflictos legales.
+       </li>
+      </ul>
+      <div class="flex space-x-4">
+       <a class="bg-green-500 text-white px-4 py-2 rounded hover:bg-green-600" href="#">
+        Consulta gratis
+       </a>
+      </div>
+     </div>
+    </div>
+   </section>
+   <!-- Divorcios -->
+   <section class="mb-12 fade-in bg-gray-200 p-6 rounded-lg shadow-lg">
+    <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+     <img alt="Image representing Divorcios" class="w-full h-48 object-cover" src="https://storage.googleapis.com/a1aa/image/e8qX6s4MFXQbBKSeMmDpUXXOyzZsd6xX0MUlNFWnmahlZrHUA.jpg"/>
+     <div class="p-6">
+      <h2 class="text-2xl font-semibold mb-2">
+       Divorcios
+      </h2>
+      <p class="text-gray-600 mb-4">
+       Ofrecemos asesoría y representación en casos de divorcio, asegurando que sus derechos sean protegidos en todo momento. Entendemos que el proceso de divorcio puede ser emocionalmente desafiante, y estamos aquí para ayudarle a navegarlo con confianza.
+      </p>
+      <p class="text-gray-600 mb-4">
+       Ejemplos de nuestros servicios en casos de divorcio incluyen:
+      </p>
+      <ul class="list-disc list-inside text-gray-600 mb-4">
+       <li>
+        Divorcio contencioso: Representación en casos donde las partes no están de acuerdo.
+       </li>
+       <li>
+        Divorcio de mutuo acuerdo: Asistencia en la negociación de términos amigables.
+       </li>
+       <li>
+        Custodia de hijos: Defensa de sus derechos y los de sus hijos.
+       </li>
+      </ul>
+      <div class="flex space-x-4">
+       <a class="bg-green-500 text-white px-4 py-2 rounded hover:bg-green-600" href="#">
+        Consulta gratis
+       </a>
+      </div>
+     </div>
+    </div>
+   </section>
+   <!-- Derecho Civil -->
+   <section class="mb-12 fade-in bg-gray-200 p-6 rounded-lg shadow-lg">
+    <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+     <img alt="Image representing Derecho Civil" class="w-full h-48 object-cover" src="https://storage.googleapis.com/a1aa/image/xCfP5syOIP2xPK3ROCICUsCfRlH11Sw7jcHinMsd3ekOzWPoA.jpg"/>
+     <div class="p-6">
+      <h2 class="text-2xl font-semibold mb-2">
+       Derecho Civil
+      </h2>
+      <p class="text-gray-600 mb-4">
+       Brindamos asesoría en todos los aspectos del derecho civil, incluyendo contratos, propiedad y responsabilidad civil. Nuestro equipo está comprometido a proteger sus derechos y asegurar que sus intereses sean representados adecuadamente.
+      </p>
+      <p class="text-gray-600 mb-4">
+       Ejemplos de nuestros servicios en derecho civil incluyen:
+      </p>
+      <ul class="list-disc list-inside text-gray-600 mb-4">
+       <li>
+        Contratos civiles: Redacción y revisión de contratos para asegurar su validez legal.
+       </li>
+       <li>
+        Propiedad y bienes raíces: Asesoría en transacciones de compra y venta de propiedades.
+       </li>
+       <li>
+        Responsabilidad civil: Representación en casos de daños y perjuicios.
+       </li>
+      </ul>
+      <div class="flex space-x-4">
+       <a class="bg-green-500 text-white px-4 py-2 rounded hover:bg-green-600" href="#">
+        Consulta gratis
+       </a>
+      </div>
+     </div>
+    </div>
+   </section>
+   <!-- Procesos Ejecutivos -->
+   <section class="mb-12 fade-in bg-gray-200 p-6 rounded-lg shadow-lg">
+    <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+     <img alt="Image representing Procesos Ejecutivos" class="w-full h-48 object-cover" src="https://storage.googleapis.com/a1aa/image/IbudnXZm6GYlJ5WjWVfKxSVX9ZVhRydOYjYg59s9SWm0s1DKA.jpg"/>
+     <div class="p-6">
+      <h2 class="text-2xl font-semibold mb-2">
+       Procesos Ejecutivos
+      </h2>
+      <p class="text-gray-600 mb-4">
+       Asesoramos y representamos en procesos ejecutivos, asegurando una resolución rápida y efectiva de sus casos. Nuestro equipo trabaja diligentemente para proteger sus intereses y asegurar que se cumplan sus derechos.
+      </p>
+      <p class="text-gray-600 mb-4">
+       Ejemplos de nuestros servicios en procesos ejecutivos incluyen:
+      </p>
+      <ul class="list-disc list-inside text-gray-600 mb-4">
+       <li>
+        Procesos de ejecución de sentencias: Aseguramos el cumplimiento de decisiones judiciales.
+       </li>
+       <li>
+        Embargos y ejecuciones hipotecarias: Representación en casos de recuperación de bienes.
+       </li>
+       <li>
+        Recuperación de deudas: Asistencia en la recuperación de deudas pendientes.
+       </li>
+      </ul>
+      <div class="flex space-x-4">
+       <a class="bg-green-500 text-white px-4 py-2 rounded hover:bg-green-600" href="#">
+        Consulta gratis
+       </a>
+      </div>
+     </div>
+    </div>
+   </section>
+   <!-- Accidentes de Tránsito -->
+   <section class="mb-12 fade-in bg-gray-200 p-6 rounded-lg shadow-lg">
+    <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+     <img alt="Image representing Accidentes de Tránsito" class="w-full h-48 object-cover" src="https://storage.googleapis.com/a1aa/image/rju1xIu0PCqGDRq1GDuj4xCexIXidWLxB5Uf7GazHSDqZrHUA.jpg"/>
+     <div class="p-6">
+      <h2 class="text-2xl font-semibold mb-2">
+       Accidentes de Tránsito
+      </h2>
+      <p class="text-gray-600 mb-4">
+       Proveemos asesoría y representación en casos de accidentes de tránsito, asegurando que reciba la compensación que merece. Nuestro equipo está dedicado a proteger sus derechos y a obtener los mejores resultados posibles para usted.
+      </p>
+      <p class="text-gray-600 mb-4">
+       Ejemplos de nuestros servicios en accidentes de tránsito incluyen:
+      </p>
+      <ul class="list-disc list-inside text-gray-600 mb-4">
+       <li>
+        Reclamaciones de seguros: Asistencia en la presentación y negociación de reclamaciones.
+       </li>
+       <li>
+        Negociación de compensaciones: Representación en la obtención de compensaciones justas.
+       </li>
+       <li>
+        Representación en juicios: Defensa de sus derechos en procedimientos judiciales.
+       </li>
+      </ul>
+      <div class="flex space-x-4">
+       <a class="bg-green-500 text-white px-4 py-2 rounded hover:bg-green-600" href="#">
+        Consulta gratis
+       </a>
+      </div>
+     </div>
+    </div>
+   </section>
+  </main>
+  <script>
+   document.getElementById('menu-btn').addEventListener('click', function() {
+            var menu = document.getElementById('mobile-menu');
+            if (menu.classList.contains('hidden')) {
+                menu.classList.remove('hidden');
+            } else {
+                menu.classList.add('hidden');
+            }
+        });
+  </script>
+ </body>
+</html>
