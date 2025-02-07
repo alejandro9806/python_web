@@ -23,7 +23,7 @@
             margin: 0;
             padding: 0;
             gap: 0;
-          }
+        }
 
         h1, h2, h3, .logo-text {
             font-family: 'Cormorant Garamond', serif;
@@ -83,17 +83,16 @@
         }
 
         #hero-video {
-            
             position: absolute;
             top: 50%;
             left: 50%;
             width: 100%;
             height: 100%;
-            object-fit: cover; /* Ajusta el video sin deformarlo */
+            object-fit: cover;
             transform: translate(-50%, -50%);
-            z-index :-1
-                        
+            z-index: -1;
         }
+
         .hero img {
             position: absolute;
             top: 0;
@@ -131,7 +130,6 @@
 
         .value-box {
             background: #f3f4f6;
-            
             border-radius: 12px;
             box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
             transition: all 0.3s ease;
@@ -144,14 +142,14 @@
 
         .contact {
             background-color: #6687a8;
-            padding:20px;
+            padding: 20px;
         }
 
-        .contact h2{
+        .contact h2 {
             font-size: 2.5rem;
             text-align: center;
             margin-bottom: 30px;
-          }
+        }
 
         .contact .info, .contact .location {
             background-color: white;
@@ -183,11 +181,34 @@
             transform: translateY(-2px);
         }
 
+        .floating-social-icons {
+            position: fixed;
+            top: 50%;
+            right: 0;
+            transform: translateY(-50%);
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            z-index: 1000;
+        }
+
+        .floating-social-icons a {
+            background-color: #1f2937;
+            color: white;
+            padding: 10px;
+            border-radius: 50%;
+            transition: background-color 0.3s ease;
+        }
+
+        .floating-social-icons a:hover {
+            background-color: #3b82f6;
+        }
+
         @media (max-width: 768px) {
             .nav-toggle {
                 display: block;
             }
-        
+
             .nav {
                 display: none;
                 position: absolute;
@@ -198,11 +219,11 @@
                 flex-direction: column;
                 padding: var(--spacing-md);
             }
-        
+
             .nav.active {
                 display: flex;
             }
-            
+
             .hero h1 {
                 font-size: 2.5rem;
             }
@@ -230,22 +251,19 @@
       </span>
      </div>
      <nav class="nav hidden md:flex items-center space-x-6">
-      <a  href="{{url_for('home')}}">
+      <a href="{{url_for('home')}}">
        Inicio
       </a>
-      <a  href="#nosotros">
+      <a href="#nosotros">
        Nosotros
       </a>
-      <a  href="{{url_for('servicios')}}">
+      <a href="{{url_for('servicios')}}">
        Servicios
       </a>
-      <a  href="{{url_for('home')}}#contacto">
+      <a href="{{url_for('home')}}#contacto">
        Contacto
-      </a>
-      <a  href="#blog">
-       Blog
-      </a>
-      <a  href="#consulta">
+      <!--<a href="#blog">Blog</a>-->
+      <a href="#consulta">
        Consulta Gratis
       </a>
      </nav>
@@ -257,17 +275,20 @@
    </div>
   </header>
   <section class="hero">
-    <div class="hero-section">
-        <!-- Video de fondo -->
-        <video autoplay muted loop id="hero-video">
-            <source src="./static/img/vid3.mp4" type="video/mp4">
-        Tu navegador no soporta videos HTML5.
-        </video>
-        <div class="hero-content">
-            <h1>¿Quiénes Somos?</h1>
-            <p>Expertos legales comprometidos con tu tranquilidad y justicia</p>
-        </div>
-    
+   <div class="hero-section">
+    <video autoplay="" id="hero-video" loop="" muted="">
+     <source src="./static/img/vid3.mp4" type="video/mp4"/>
+     Tu navegador no soporta videos HTML5.
+    </video>
+    <div class="hero-content">
+     <h1>
+      ¿Quiénes Somos?
+     </h1>
+     <p>
+      Expertos legales comprometidos con tu tranquilidad y justicia
+     </p>
+    </div>
+   </div>
   </section>
   <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
    <section class="mb-20 bg-gray-100 py-12">
@@ -304,8 +325,7 @@
        </h3>
       </div>
       <p class="text-gray-700">
-        Ofrecer asesoría legal de excelencia, personalizada y accesible, garantizando soluciones efectivas y éticas. Nos comprometemos a brindar un servicio innovador y de alto nivel, respaldado por un equipo de expertos que trabajan con integridad y profesionalismo.
-</p>
+       Ofrecer asesoría legal de excelencia, personalizada y accesible, garantizando soluciones efectivas y éticas. Nos comprometemos a brindar un servicio innovador y de alto nivel, respaldado por un equipo de expertos que trabajan con integridad y profesionalismo.
       </p>
      </div>
      <div class="value-box bg-green-50">
@@ -317,7 +337,7 @@
        </h3>
       </div>
       <p class="text-gray-700">
-        Ser la firma legal de referencia, destacada por su ética, profesionalismo y enfoque humano. Especializados en derecho laboral, civil y comercial, brindamos soluciones integrales a empresas, emprendedores y familias. Nos comprometemos a generar un impacto positivo en la sociedad y a consolidarnos como líderes en el sector.
+       Ser la firma legal de referencia, destacada por su ética, profesionalismo y enfoque humano. Especializados en derecho laboral, civil y comercial, brindamos soluciones integrales a empresas, emprendedores y familias. Nos comprometemos a generar un impacto positivo en la sociedad y a consolidarnos como líderes en el sector.
       </p>
      </div>
      <div class="value-box bg-yellow-100">
@@ -355,43 +375,46 @@
   <section class="contact" id="contacto">
    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="container">
-        <h2>Contáctanos</h2>
-    <div class="grid md:grid-cols-2 gap-8">
-     <div class="info p-8">
-      <h3 class="text-2xl font-bold mb-6">
-       Información de Contacto
-      </h3>
-      <ul class="space-y-4">
-       <li class="flex items-center">
-        <i class="fas fa-phone-alt text-blue-600 text-xl w-8">
-        </i>
-        <span>
-         +57 304 450 1171
-        </span>
-       </li>
-       <li class="flex items-center">
-        <i class="fas fa-envelope text-blue-600 text-xl w-8">
-        </i>
-        <a class="hover:text-blue-600 transition duration-300" href="mailto:contacto@trujillolaw.com">
-         contacto@trujillolaw.com
-        </a>
-       </li>
-       <li class="flex items-center">
-        <i class="fas fa-map-marker-alt text-blue-600 text-xl w-8">
-        </i>
-        <span>
-         Calle 16A #26-24, Manizales, Caldas
-        </span>
-       </li>
-      </ul>
-     </div>
-     <div class="location p-8">
-      <h3 class="text-2xl font-bold mb-6">
-       Nuestra Ubicación
-      </h3>
-      <div class="rounded-lg overflow-hidden shadow-lg">
-       <iframe allowfullscreen="" height="300" loading="lazy" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1987.1200441869669!2d-75.52230406032716!3d5.064791400000008!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e476f1032dcf6db%3A0xe987a1712fbfb3c0!2sCl.%2016a%20%232624%2C%20Manizales%2C%20Caldas!5e0!3m2!1ses-419!2sco!4v1736538570920!5m2!1ses-419!2sco" style="border:0;" width="100%">
-       </iframe>
+     <h2>
+      Contáctanos
+     </h2>
+     <div class="grid md:grid-cols-2 gap-8">
+      <div class="info p-8">
+       <h3 class="text-2xl font-bold mb-6">
+        Información de Contacto
+       </h3>
+       <ul class="space-y-4">
+        <li class="flex items-center">
+         <i class="fas fa-phone-alt text-blue-600 text-xl w-8">
+         </i>
+         <span>
+          +57 304 450 1171
+         </span>
+        </li>
+        <li class="flex items-center">
+         <i class="fas fa-envelope text-blue-600 text-xl w-8">
+         </i>
+         <a class="hover:text-blue-600 transition duration-300" href="mailto:contacto@trujillolaw.com">
+          contacto@trujillolaw.com
+         </a>
+        </li>
+        <li class="flex items-center">
+         <i class="fas fa-map-marker-alt text-blue-600 text-xl w-8">
+         </i>
+         <span>
+          Calle 16A #26-24, Manizales, Caldas
+         </span>
+        </li>
+       </ul>
+      </div>
+      <div class="location p-8">
+       <h3 class="text-2xl font-bold mb-6">
+        Nuestra Ubicación
+       </h3>
+       <div class="rounded-lg overflow-hidden shadow-lg">
+        <iframe allowfullscreen="" height="300" loading="lazy" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1987.1200441869669!2d-75.52230406032716!3d5.064791400000008!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e476f1032dcf6db%3A0xe987a1712fbfb3c0!2sCl.%2016a%20%232624%2C%20Manizales%2C%20Caldas!5e0!3m2!1ses-419!2sco!4v1736538570920!5m2!1ses-419!2sco" style="border:0;" width="100%">
+        </iframe>
+       </div>
       </div>
      </div>
     </div>
@@ -453,24 +476,42 @@
     </p>
    </div>
   </footer>
+  <div class="floating-social-icons">
+   <a href="#">
+    <i class="fab fa-facebook-f">
+    </i>
+   </a>
+   <a href="#">
+    <i class="fab fa-twitter">
+    </i>
+   </a>
+   <a href="#">
+    <i class="fab fa-linkedin-in">
+    </i>
+   </a>
+   <a href="#">
+    <i class="fab fa-instagram">
+    </i>
+   </a>
+  </div>
   <script>
    // Header scroll effect
-        window.addEventListener('scroll', () => {
-            const header = document.querySelector('.header');
-            if (window.scrollY > 50) {
-                header.classList.add('scrolled');
-            } else {
-                header.classList.remove('scrolled');
-            }
-        });
+    window.addEventListener('scroll', () => {
+        const header = document.querySelector('.header');
+        if (window.scrollY > 50) {
+            header.classList.add('scrolled');
+        } else {
+            header.classList.remove('scrolled');
+        }
+    });
 
-        // Mobile menu toggle
-        const navToggle = document.querySelector('.nav-toggle');
-        const nav = document.querySelector('.nav');
+    // Mobile menu toggle
+    const navToggle = document.querySelector('.nav-toggle');
+    const nav = document.querySelector('.nav');
 
-        navToggle.addEventListener('click', () => {
-            nav.classList.toggle('active');
-        });
+    navToggle.addEventListener('click', () => {
+        nav.classList.toggle('active');
+    });
   </script>
  </body>
 </html>

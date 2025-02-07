@@ -108,13 +108,38 @@
         .cta-button:hover {
             background-color: #e05d50; /* Cambio de color al pasar el cursor */
         }
+
+        
+        .floating-social-icons {
+            position: fixed;
+            top: 50%;
+            right: 0;
+            transform: translateY(-50%);
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            z-index: 1000;
+        }
+
+        .floating-social-icons a {
+            background-color: #1f2937;
+            color: white;
+            padding: 10px;
+            border-radius: 50%;
+            transition: background-color 0.3s ease;
+        }
+
+        .floating-social-icons a:hover {
+            background-color: #3b82f6;
+        }
+
   </style>
  </head>
  <body class="bg-gray-100 text-gray-800">
   <header class="bg-gray-800 text-white py-4 fixed w-full z-10">
    <div class="container mx-auto flex justify-between items-center px-6">
     <div class="flex items-center">
-     <img alt="Logo of Trujillo y Asociados Law Group" class="h-10 w-10 mr-3" src="https://storage.googleapis.com/a1aa/image/je7VfSxeDzKhjoUimlTVA5dHmmXeC3Qof84ykRxRTnDhMb9gC.jpg"/>
+     <img alt="Logo of Trujillo y Asociados Law Group" class="h-10 w-10 mr-3" src="./static/img/TRUJILLO Y ASOCIADOS LAW.png">
      <span class="font-semibold text-xl">
       Trujillo y Asociados Law Group
      </span>
@@ -132,9 +157,9 @@
      <a class="hover:text-blue-400" href="{{url_for('home')}}#contacto">
       Contáctanos
      </a>
-     <a class="hover:text-blue-400" href="#">
+     <!--<a class="hover:text-blue-400" href="#">
       Blog
-     </a>
+     </a>-->
      <a class="hover:text-blue-400" href="https://wa.me/573044501171">
       Consulta Gratis
      </a>
@@ -159,9 +184,9 @@
     <a class="block px-4 py-2 hover:bg-gray-700" href="{{url_for('home')}}#contacto">
      Contáctanos
     </a>
-    <a class="block px-4 py-2 hover:bg-gray-700" href="#">
+    <!--<a class="block px-4 py-2 hover:bg-gray-700" href="#">
      Blog
-    </a>
+    </a>-->
     <a class="block px-4 py-2 hover:bg-gray-700" href="https://wa.me/573044501171">
      Consulta Gratis
     </a>
@@ -232,7 +257,7 @@
    <!-- Divorcios -->
    <section class="mb-12 fade-in bg-gray-200 p-6 rounded-lg shadow-lg">
     <div class="bg-white rounded-lg shadow-lg overflow-hidden">
-     <img alt="Image representing Divorcios" class="w-full h-48 object-cover" src="https://storage.googleapis.com/a1aa/image/e8qX6s4MFXQbBKSeMmDpUXXOyzZsd6xX0MUlNFWnmahlZrHUA.jpg"/>
+     <img alt="Image representing Divorcios" class="w-full h-48 object-cover" src="./static/img/divorce2.jpeg"/>
      <div class="p-6">
       <h2 class="text-2xl font-semibold mb-2">
        Divorcios
@@ -265,7 +290,7 @@
    <!-- Derecho Civil -->
    <section class="mb-12 fade-in bg-gray-200 p-6 rounded-lg shadow-lg">
     <div class="bg-white rounded-lg shadow-lg overflow-hidden">
-     <img alt="Image representing Derecho Civil" class="w-full h-48 object-cover" src="https://storage.googleapis.com/a1aa/image/xCfP5syOIP2xPK3ROCICUsCfRlH11Sw7jcHinMsd3ekOzWPoA.jpg"/>
+     <img alt="Image representing Derecho Civil" class="w-full h-48 object-cover" src="./static/img/lawcivil.jpg"/>
      <div class="p-6">
       <h2 class="text-2xl font-semibold mb-2">
        Derecho Civil
@@ -331,7 +356,7 @@
    <!-- Accidentes de Tránsito -->
    <section class="mb-12 fade-in bg-gray-200 p-6 rounded-lg shadow-lg">
     <div class="bg-white rounded-lg shadow-lg overflow-hidden">
-     <img alt="Image representing Accidentes de Tránsito" class="w-full h-48 object-cover" src="https://storage.googleapis.com/a1aa/image/rju1xIu0PCqGDRq1GDuj4xCexIXidWLxB5Uf7GazHSDqZrHUA.jpg"/>
+     <img alt="Image representing Accidentes de Tránsito" class="w-full h-48 object-cover" src="./static/img/acctransito.jpg"/>
      <div class="p-6">
       <h2 class="text-2xl font-semibold mb-2">
        Accidentes de Tránsito
@@ -361,16 +386,36 @@
      </div>
     </div>
    </section>
+   <div class="floating-social-icons">
+    <a href="#">
+     <i class="fab fa-facebook-f">
+     </i>
+    </a>
+    <a href="#">
+     <i class="fab fa-twitter">
+     </i>
+    </a>
+    <a href="#">
+     <i class="fab fa-linkedin-in">
+     </i>
+    </a>
+    <a href="#">
+     <i class="fab fa-instagram">
+     </i>
+    </a>
+   </div>
   </main>
+  
+
   <script>
-   document.getElementById('menu-btn').addEventListener('click', function() {
-            var menu = document.getElementById('mobile-menu');
-            if (menu.classList.contains('hidden')) {
-                menu.classList.remove('hidden');
-            } else {
-                menu.classList.add('hidden');
-            }
-        });
-  </script>
- </body>
-</html>
+    document.getElementById('menu-btn').addEventListener('click', function() {
+             var menu = document.getElementById('mobile-menu');
+             if (menu.classList.contains('hidden')) {
+                 menu.classList.remove('hidden');
+             } else {
+                 menu.classList.add('hidden');
+             }
+         });
+   </script>
+  </body>
+ </html>

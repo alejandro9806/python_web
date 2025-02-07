@@ -582,6 +582,29 @@
         grid-template-columns: repeat(3, 1fr);
     }
 
+    .floating-social-icons {
+        position: fixed;
+        top: 50%;
+        right: 0;
+        transform: translateY(-50%);
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        z-index: 1000;
+    }
+
+    .floating-social-icons a {
+        background-color: #1f2937;
+        color: white;
+        padding: 10px;
+        border-radius: 50%;
+        transition: background-color 0.3s ease;
+    }
+
+    .floating-social-icons a:hover {
+        background-color: #3b82f6;
+    }
+
 }
 
 @media (max-width: 768px) {
@@ -717,7 +740,7 @@
             <a href="{{url_for('nosotros')}}">Nosotros</a>
             <a href="{{url_for('servicios')}}">Servicios</a>
             <a href="#contacto">Contáctanos</a>
-            <a href="#blog">Blog</a>
+            <!--<a href="#blog">Blog</a>-->
             <a class="bg-custom-gray text-white px-4 py-2 rounded hover:bg-gray-700 transition duration-300" href="https://wa.me/573044501171">Consulta Gratis</a>
         </nav>
     </div>
@@ -736,8 +759,8 @@
         <h2>Protegemos tus derechos con experiencia y compromiso</h2>
         <p>Especialistas en divorcios, derecho comercial, derecho civil, procesos ejecutivos y accidentes de tránsito</p>
         <div class="buttons">
-            <a href="#" class="btn-consulta">Agenda tu Consulta</a>
-            <a href="#" class="btn-servicios">Conoce Nuestros Servicios</a>
+            <a href="https://wa.me/573044501171" class="btn-consulta">Agenda tu Consulta</a>
+            <a href="#servicios" class="btn-servicios">Conoce Nuestros Servicios</a>
         </div>
     </div>
 </section>
@@ -806,7 +829,7 @@
                         <h3>Divorcios</h3>
                         <p>Asesoramiento experto en procesos de divorcio</p>
                         <div class="buttons">
-                          <a href="#leer-mas-transito" class="btn btn-primary">Leer más</a>
+                          <a href="{{url_for('servicios')}}" class="btn btn-primary">Leer más</a>
                           <a href="https://wa.me/573044501171?text=Hola,%20quiero%20una%20consulta%20gratuita%20sobre%20Derecho%20Comercial." class="btn btn-secondary">Consulta gratis</a>
                       </div>
                         
@@ -823,7 +846,7 @@
                         <h3>Derecho Civil</h3>
                         <p>Representación en casos civiles y litigios</p>
                         <div class="buttons">
-                          <a href="#leer-mas-transito" class="btn btn-primary">Leer más</a>
+                          <a href="{{url_for('servicios')}}" class="btn btn-primary">Leer más</a>
                           <a href="https://wa.me/573044501171?text=Hola,%20quiero%20una%20consulta%20gratuita%20sobre%20Derecho%20Civil." class="btn btn-secondary" class="btn btn-secondary">Consulta gratis</a>
                       </div>
                     </div>
@@ -839,7 +862,7 @@
                         <h3>Procesos Ejecutivos</h3>
                         <p>Gestión eficiente de procesos ejecutivos</p>
                         <div class="buttons">
-                          <a href="#leer-mas-transito" class="btn btn-primary">Leer más</a>
+                          <a href="{{url_for('servicios')}}" class="btn btn-primary">Leer más</a>
                           <a href="https://wa.me/573044501171?text=Hola,%20quiero%20una%20consulta%20gratuita%20sobre%20un%20Proceso%20Ejecutivo." class="btn btn-secondary" class="btn btn-secondary">Consulta gratis</a>
                       </div>
                     </div>
@@ -855,7 +878,7 @@
                         <h3>Accidentes de Tránsito</h3>
                         <p>Asistencia legal en accidentes y seguros</p>
                         <div class="buttons">
-                          <a href="#leer-mas-transito" class="btn btn-primary">Leer más</a>
+                          <a href="{{url_for('servicios')}}" class="btn btn-primary">Leer más</a>
                           <a href="https://wa.me/573044501171?text=Hola,%20quiero%20una%20consulta%20gratuita%20sobre%20Accidente%20de%20Transito." class="btn btn-secondary" class="btn btn-secondary">Consulta gratis</a>
                       </div>
                     </div>
@@ -1052,7 +1075,24 @@
           <p>© 2025 Trujillo y Asociados Law Group. Todos los derechos reservados.</p>
       </div>
   </footer>
-</body>
+  <div class="floating-social-icons">
+    <a href="#">
+     <i class="fab fa-facebook-f">
+     </i>
+    </a>
+    <a href="#">
+     <i class="fab fa-twitter">
+     </i>
+    </a>
+    <a href="#">
+     <i class="fab fa-linkedin-in">
+     </i>
+    </a>
+    <a href="#">
+     <i class="fab fa-instagram">
+     </i>
+    </a>
+   </div>
   <script>
     // Navegación responsive
     const navToggle = document.querySelector('.nav-toggle');
@@ -1217,6 +1257,5 @@ document.getElementById('contactForm').addEventListener('submit', async function
 
         setInterval(nextSlide, 3000);
 </script>
-
 </body>
 </html>
