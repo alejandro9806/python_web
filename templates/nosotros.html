@@ -14,7 +14,16 @@
             font-family: 'Open Sans', sans-serif;
             line-height: 1.6;
             color: #1f2937;
+            background-color: #f8fafc;
+            margin: 0;
+            padding: 0;
         }
+
+        section {
+            margin: 0;
+            padding: 0;
+            gap: 0;
+          }
 
         h1, h2, h3, .logo-text {
             font-family: 'Cormorant Garamond', serif;
@@ -69,15 +78,27 @@
             color: white;
             text-align: center;
             position: relative;
-            margin-top: 0;
+            gap: 0;
             background-color: rgba(0, 0, 0, 0.6);
         }
 
+        #hero-video {
+            
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 100%;
+            height: 100%;
+            object-fit: cover; /* Ajusta el video sin deformarlo */
+            transform: translate(-50%, -50%);
+            z-index :-1
+                        
+        }
         .hero img {
             position: absolute;
             top: 0;
             left: 0;
-            width: 100%;
+            width: 200%;
             height: 100%;
             object-fit: cover;
             z-index: -1;
@@ -110,7 +131,7 @@
 
         .value-box {
             background: #f3f4f6;
-            padding: 2rem;
+            
             border-radius: 12px;
             box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
             transition: all 0.3s ease;
@@ -122,9 +143,15 @@
         }
 
         .contact {
-            background-color: #f8fafc;
-            padding: 4rem 2rem;
+            background-color: #6687a8;
+            padding:20px;
         }
+
+        .contact h2{
+            font-size: 2.5rem;
+            text-align: center;
+            margin-bottom: 30px;
+          }
 
         .contact .info, .contact .location {
             background-color: white;
@@ -157,6 +184,25 @@
         }
 
         @media (max-width: 768px) {
+            .nav-toggle {
+                display: block;
+            }
+        
+            .nav {
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                background-color: var(--primary-color);
+                flex-direction: column;
+                padding: var(--spacing-md);
+            }
+        
+            .nav.active {
+                display: flex;
+            }
+            
             .hero h1 {
                 font-size: 2.5rem;
             }
@@ -183,27 +229,27 @@
        Trujillo y Asociados Law Group
       </span>
      </div>
-     <nav class="hidden md:flex items-center space-x-6">
-      <a class="nav-link" href="{{url_for('home')}}">
+     <nav class="nav hidden md:flex items-center space-x-6">
+      <a  href="{{url_for('home')}}">
        Inicio
       </a>
-      <a class="nav-link text-blue-400" href="#nosotros">
+      <a  href="#nosotros">
        Nosotros
       </a>
-      <a class="nav-link" href="{{url_for('servicios')}}">
+      <a  href="{{url_for('servicios')}}">
        Servicios
       </a>
-      <a class="nav-link" href="{{url_for('home')}}#contacto">
+      <a  href="{{url_for('home')}}#contacto">
        Contacto
       </a>
-      <a class="nav-link" href="#blog">
+      <a  href="#blog">
        Blog
       </a>
-      <a class="bg-blue-600 text-white px-6 py-2 rounded-full hover:bg-blue-700 transition duration-300" href="#consulta">
+      <a  href="#consulta">
        Consulta Gratis
       </a>
      </nav>
-     <button class="md:hidden text-white">
+     <button class="nav-toggle md:hidden text-white">
       <i class="fas fa-bars text-2xl">
       </i>
      </button>
@@ -211,14 +257,16 @@
    </div>
   </header>
   <section class="hero">
-   <img alt="Imagen de fondo de un abogado trabajando en su oficina con documentos legales y una computadora portátil" height="1080" src="./static/img/derechocomercial.jpg" width="1920"/>
-
-   <h1>
-    ¿Quiénes Somos?
-    </h1>
-    <p class="mt-4">
-        Expertos legales comprometidos con tu tranquilidad y justicia
-    </p>
+    <div class="hero-section">
+        <!-- Video de fondo -->
+        <video autoplay muted loop id="hero-video">
+            <source src="./static/img/vid3.mp4" type="video/mp4">
+        Tu navegador no soporta videos HTML5.
+        </video>
+        <div class="hero-content">
+            <h1>¿Quiénes Somos?</h1>
+            <p>Expertos legales comprometidos con tu tranquilidad y justicia</p>
+        </div>
     
   </section>
   <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
@@ -306,6 +354,8 @@
   </main>
   <section class="contact" id="contacto">
    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="container">
+        <h2>Contáctanos</h2>
     <div class="grid md:grid-cols-2 gap-8">
      <div class="info p-8">
       <h3 class="text-2xl font-bold mb-6">
@@ -415,11 +465,11 @@
         });
 
         // Mobile menu toggle
-        const menuButton = document.querySelector('button');
-        const nav = document.querySelector('nav');
-        
-        menuButton.addEventListener('click', () => {
-            nav.classList.toggle('hidden');
+        const navToggle = document.querySelector('.nav-toggle');
+        const nav = document.querySelector('.nav');
+
+        navToggle.addEventListener('click', () => {
+            nav.classList.toggle('active');
         });
   </script>
  </body>

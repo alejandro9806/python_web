@@ -1,20 +1,18 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="utf-8"/>
-  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-  <title>Trujillo y Asociados Law Group | Especialistas en Divorcios y Accidentes de Tránsito</title>
-  <meta content="Trujillo y Asociados: Servicios legales en divorcios, derecho comercial, accidentes de tránsito, y más. Contacte para una consulta gratuita." name="description"/>
-  <meta content="abogados, derecho, divorcios, accidentes, consulta legal gratuita, asesoria legal, SIC, Industria y Comercio" name="keywords"/>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
-  <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&amp;family=Open+Sans:wght@400;600&amp;display=swap" rel="stylesheet"/>
-  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.css" rel="stylesheet">
-  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.js"></script>
-  <style>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>Trujillo y Asociados Law Group | Especialistas en Divorcios y Accidentes de Tránsito</title>
+    <meta content="Trujillo y Asociados: Servicios legales en divorcios, derecho comercial, accidentes de tránsito, y más. Contacte para una consulta gratuita." name="description"/>
+    <meta content="abogados, derecho, divorcios, accidentes, consulta legal gratuita, asesoria legal, SIC, Industria y Comercio" name="keywords"/>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&amp;family=Open+Sans:wght@400;600&amp;display=swap" rel="stylesheet"/>
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.js"></script>
+    <style>
 
-    
-    /* Variables CSS para colores y espaciado consistente */
     :root {
         --primary-color: #4a4a4a;
         --secondary-color: #3a3a3a;
@@ -26,7 +24,7 @@
         --spacing-md: 1rem;
         --spacing-lg: 2rem;
     }
-
+    
     body {
         font-family: 'Open Sans', sans-serif;
         line-height: 1.6;
@@ -37,16 +35,15 @@
         background: var(--bg-highlight);
         color: var(--text-light);
     }
-
-    /* Reset y estilos base */
+    
     * {
         margin: 0;
         padding: 0;
         box-sizing: border-box;
     }
 
-
-    /* Header Responsive */
+    
+    
     .header {
         background-color: var(--primary-color);
         color: var(--text-light);
@@ -56,7 +53,7 @@
         z-index: 1000;
         transition: top 0.3s;
     }
-
+    
     .header-container {
         max-width: 1200px;
         margin: 0 auto;
@@ -65,18 +62,17 @@
         justify-content: space-between;
         align-items: center;
     }
-
+    
     .logo {
         display: flex;
         align-items: center;
         gap: var(--spacing-sm);
     }
-
+    
     .logo img {
         height: 40px;
     }
-
-    /* Navegación responsive */
+    
     .nav-toggle {
         display: none;
         background: none;
@@ -85,37 +81,39 @@
         font-size: 1.5rem;
         cursor: pointer;
     }
-
+    
     .nav {
         display: flex;
         gap: var(--spacing-md);
     }
-
+    
     .nav a {
-        color: var(--text-highlight); /* Aumenta contraste en enlaces */
+        color: var(--text-light);
         text-decoration: none;
         padding: 0.5rem 1rem;
         transition: color 0.3s;
     }
-
-    .nav a:hover {
+    
+    .nav a:hover, .nav a.active {
         color: var(--accent-color);
     }
     
     .nav a.active {
-    color: var(--accent-color);
-    font-weight: bold;
-    border-bottom: 2px solid var(--accent-color);
+        font-weight: bold;
+        border-bottom: 2px solid var(--accent-color);
     }
-    /* Main section styles */
-    #inicio {
-        
+    
+    .hero {
         background: url('./static/img/hero2.png') no-repeat center center/cover;
-        height: 100vh;
-        color: white;
+            height: 100vh;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 2rem 1rem;
+        
         
     }
-
+    
     .cont {
         background-color: rgba(0, 0, 0, 0.5);
         padding: 4rem;
@@ -127,146 +125,60 @@
         flex-direction: column;
         align-items: flex-start;
         justify-content: center;
-        height: 100%;
         text-align: left;
-        color: white;
     }
-
+    
     .cont img {
         position: absolute;
         max-width: 35%;
-        top: 0px;
+        top: 0;
         right: 25px;
-        width: 800;
         height: 100vh;
         border: 15px solid rgba(0,0,0,0.5);
-        border-radius:20%;
+        border-radius: 20%;
     }
-
-    #transparent{
-        opacity: 0;
-    }
-
+    
     .cont h1 {
         font-size: 3rem;
-            font-weight: bold;
-        }
-        @media (min-width: 768px) {
-            .title {
-                font-size: 3.75rem;
-            }
-        }
+        font-weight: bold;
+    }
     
-
     .cont h2 {
         margin-top: 1.5rem;
-            font-size: 1.5rem;
-        }
-        @media (min-width: 768px) {
-            .subtitle {
-                font-size: 1.5rem;
-            }
-        }
-
+        font-size: 1.5rem;
+    }
+    
     .cont p {
         margin-top: 1.25rem;
-            font-size: 0.875rem;
-        }
-        @media (min-width: 768px) {
-            .description {
-                font-size: 1.125rem;
-            }
-        }
-        .buttons {
-            margin-top: 1.5rem;
-        }
-        .buttons a {
-            display: inline-block;
-            margin-right: 1rem;
-            padding: 0.5rem 1rem;
-            font-weight: bold;
-            border-radius: 0.375rem;
-            text-decoration: none;
-            color: black;
-        }
-        .buttons .btn-consulta {
-            background-color: #38b2ac;
-        }
-        .buttons .btn-servicios {
-            background-color: #4299e1;
-        }
-        .buttons a:hover {
-            opacity: 0.8;
-        }
-        @media (min-width: 768px) {
-            .content h1 {
-                font-size: 3.75rem;
-            }
-            .content p {
-                font-size: 1.25rem;
-            }
-            .content .subtext {
-                font-size: 1.125rem;
-            }
-        }
-
-    /* Fade in animation */
-    @keyframes fadeIn {
-        from {
-            opacity: 0;
-        }
-        to {
-            opacity: 1;
-        }
+        font-size: 0.875rem;
     }
-
-    /* Media Queries para responsividad */
-    @media (max-width: 768px) {
-        .nav-toggle {
-            display: block;
-        }
-
-        .nav {
-            display: none;
-            position: absolute;
-            top: 100%;
-            left: 0;
-            right: 0;
-            background-color: var(--primary-color);
-            flex-direction: column;
-            padding: var(--spacing-md);
-        }
-
-        .nav.active {
-            display: flex;
-        }
-
-        .hero-content {
-            padding: var(--spacing-md);
-        }
-
-        .services-grid {
-            grid-template-columns: 1fr;
-        }
+    
+    .buttons {
+        margin-top: 1.5rem;
     }
-
-    /* Animaciones */
-    @keyframes fadeIn {
-        from { opacity: 0; }
-        to { opacity: 1; }
+    
+    .buttons a {
+        display: inline-block;
+        margin-right: 1rem;
+        padding: 0.5rem 1rem;
+        font-weight: bold;
+        border-radius: 0.375rem;
+        text-decoration: none;
+        color: black;
     }
-
-    .fade-in {
-        animation: fadeIn 1s ease-out;
+    
+    .buttons .btn-consulta {
+        background-color: #38b2ac;
     }
-
-    .container {
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 0 1rem;
-  }
-  
-  /* Stats Section */
+    
+    .buttons .btn-servicios {
+        background-color: #4299e1;
+    }
+    
+    .buttons a:hover {
+        opacity: 0.8;
+    }
+    
   .stats-section {
       background-color: #f3f4f6;
       padding: 3rem 1rem;
@@ -277,12 +189,6 @@
       grid-template-columns: repeat(1, 1fr);
       gap: 2rem;
       margin-bottom: 3rem;
-  }
-  
-  @media (min-width: 768px) {
-      .stats-grid {
-          grid-template-columns: repeat(3, 1fr);
-      }
   }
   
   .stat-card {
@@ -304,8 +210,7 @@
     font-weight: bold;
     color: black;
   }
-  
-  /* WhatsApp CTA */
+
   .whatsapp-cta {
       text-align: center;
   }
@@ -345,54 +250,134 @@
   }
   
   .services-grid {
-      display: grid;
-      grid-template-columns: repeat(1, 1fr);
-      gap: 1rem;
-  }
+    display: grid;
+    grid-template-areas:
+  "comercial comercial divorcios"
+  "civil ejecutivos accidentes";
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 20px; /* Añade espacio entre filas y columnas */
+    
+}
   
-  @media (min-width: 768px) {
-      .services-grid {
-          grid-template-columns: repeat(6, 1fr);
-      }
-  }
-  
-  .service-card {
-      position: relative;
-      border-radius: 0.5rem;
-      overflow: hidden;
-  }
-  
-  .service-card.large {
-      grid-column: span 2;
-  }
-  
-  .service-card img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-  }
-  
-  .overlay {
-      position: absolute;
-      inset: 0;
-      background-color: rgba(0, 0, 0, 0.5);
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      transition: opacity 0.3s;
-  }
-  
-  .overlay .content {
-      color: white;
-      text-align: center;
-      padding: 2rem;
-  }
-  
-  .overlay i {
-      font-size: 2.5rem;
-      margin-bottom: 1rem;
-  }
-  
+    .service-card {
+    position: relative;
+    height: 300px;
+    overflow: hidden;
+    border-radius: 8px;
+    transition: transform 0.3s;
+    border: 15px solid rgba(255,255,255,0.5);
+
+    }
+
+    .service-card.large {
+        grid-column: span 2;
+    }
+
+    .service-card img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .overlay {
+        position: absolute;
+        inset: 0;
+        background-color: rgba(0, 0, 0, 0.5);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: opacity 0.3s;
+    }
+
+    .overlay .content {
+        color: white;
+        text-align: center;
+        padding: 2rem;
+    }
+
+    .overlay i {
+        font-size: 2.5rem;
+        margin-bottom: 1rem;
+    }
+    .service-card:hover {
+        transform: translateY(-5px);
+    }
+
+    .service-card:hover i {
+        transform: scale(1.2);
+    }
+
+    /* Áreas específicas para el collage */
+    .service-card:nth-child(1) {
+        grid-area: comercial;
+    }
+
+    .service-card:nth-child(2) {
+        grid-area: divorcios;
+    }
+
+    .service-card:nth-child(3) {
+        grid-area: civil;
+    }
+
+    .service-card:nth-child(4) {
+        grid-area: ejecutivos;
+    }
+
+    .service-card:nth-child(5) {
+        grid-area: accidentes;
+    }
+
+    .service-card .overlay .content h3 {
+        font-size: 1.5rem;
+        margin-bottom: 10px;
+        font-weight: bold;
+    }
+
+    .service-card .overlay .content p {
+        font-size: 1rem;
+        opacity: 0;
+        transition: opacity 0.3s ease;
+    }
+
+    .service-card:hover .overlay .content p {
+    opacity: 1;
+    }
+
+    .service-card .buttons {
+    align-items: center;
+    margin-top: 15px;
+    display: flex;
+    gap: 10px;
+    }
+
+    .service-card .btn {
+
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    color: #fff;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+    }
+
+    .service-card .btn-primary {
+    background-color: #007bff;
+    }
+
+    .service-card .btn-primary:hover {
+    background-color: #0056b3;
+    }
+
+    .service-card .btn-secondary {
+    background-color: #28a745;
+    }
+
+    .service-card .btn-secondary:hover {
+    background-color: #1e7e34;
+    }
+    
   /* Testimonials Section */
   .testimonials-section {
       padding: 4rem 1rem;
@@ -406,17 +391,11 @@
     margin-bottom: 30px;
     color: #f1efef;
   }
-  
+ 
   .testimonials-grid {
       display: grid;
       grid-template-columns: repeat(1, 1fr);
       gap: 2rem;
-  }
-  
-  @media (min-width: 768px) {
-      .testimonials-grid {
-          grid-template-columns: repeat(3, 1fr);
-      }
   }
   
   .testimonial-card {
@@ -447,143 +426,17 @@
       color: #d1d5db;
   }
   
-  
-  
-  
-
-/* Servicios Grid Responsive */
-  
-    .services {
-        padding: var(--spacing-lg);
-    }
-
-    .services-grid {
-        display: grid;
-        grid-template-areas:
-      "comercial comercial divorcios"
-      "civil ejecutivos accidentes";
-        grid-template-columns: repeat(3, 1fr);
-        grid-template-rows: repeat(2, 1fr);
-        gap: 20px; /* Añade espacio entre filas y columnas */
-        
-    }
-
-    .service-card {
-        position: relative;
-        height: 300px;
-        overflow: hidden;
-        border-radius: 8px;
-        transition: transform 0.3s;
-        border: 15px solid rgba(255,255,255,0.5);
-
-    }
-
-    .service-card:hover {
-        transform: translateY(-5px);
-    }
-
-    .service-card img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-    }
-
-    /* Áreas específicas para el collage */
-    .service-card:nth-child(1) {
-      grid-area: comercial;
-    }
-
-    .service-card:nth-child(2) {
-      grid-area: divorcios;
-    }
-
-    .service-card:nth-child(3) {
-      grid-area: civil;
-    }
-
-    .service-card:nth-child(4) {
-      grid-area: ejecutivos;
-    }
-
-    .service-card:nth-child(5) {
-      grid-area: accidentes;
-    }
 
 
-    .service-overlay {
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        background: rgba(0, 0, 0, 0.7);
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        color: var(--text-light);
-        opacity: 0;
-        transition: opacity 0.3s;
-    }
-
-    .service-card:hover .service-overlay {
-        opacity: 1;
-    }
-
-
-.service-card .overlay .content h3 {
-  font-size: 1.5rem;
-  margin-bottom: 10px;
-  font-weight: bold;
-}
-
-.service-card .overlay .content p {
-  font-size: 1rem;
-  opacity: 0;
-  transition: opacity 0.3s ease;
-}
-
-.service-card:hover .overlay .content p {
-  opacity: 1;
-}
-
-.service-card:hover i {
-  transform: scale(1.2);
-}
-
-.service-card .buttons {
-  align-items: center;
-  margin-top: 15px;
-  display: flex;
-  gap: 10px;
-}
-
-.service-card .btn {
-  
-  text-decoration: none;
-  padding: 10px 20px;
-  border-radius: 5px;
-  color: #fff;
-  font-weight: bold;
-  transition: background-color 0.3s ease;
-}
-
-.service-card .btn-primary {
-  background-color: #007bff;
-}
-
-.service-card .btn-primary:hover {
-  background-color: #0056b3;
-}
-
-.service-card .btn-secondary {
-  background-color: #28a745;
-}
-
-.service-card .btn-secondary:hover {
-  background-color: #1e7e34;
-}
-
+.carousel {
+    display: flex;
+    overflow: hidden;
+    scroll-behavior: smooth;
+  }
+  .carousel-item {
+    min-width: 100%;
+    transition: transform 0.5s ease;
+  }
 
 
 /* Contact Section */
@@ -596,21 +449,18 @@
     font-size: 2.5rem;
     text-align: center;
     margin-bottom: 30px;
-    color: white;
   }
 
   .contact-section p{
     font-size: 1.3rem;
     text-align: center;
     margin-bottom: 30px;
-    color: white;
   }
 
 
   .contact-section h3{
     font-size: 1.5rem;
     margin-bottom: 30px;
-    color: white;
   }
   
   .contact-grid {
@@ -619,11 +469,6 @@
       gap: 3rem;
   }
   
-  @media (min-width: 768px) {
-      .contact-grid {
-          grid-template-columns: repeat(2, 1fr);
-      }
-  }
   
   .contact-form input,
   .contact-form textarea {
@@ -677,53 +522,6 @@
   .contact-info i.fa-map-marker-alt {
       color: #ef4444;
   }
-/* Responsive Adjustments */
-@media (max-width: 768px) {
-    .stats-number {
-        font-size: 2rem;
-    }
-
-    .whatsapp-button {
-        font-size: 1rem;
-        padding: 0.75rem 1.5rem;
-    }
-
-    .service-card.large {
-        grid-column: span 1;
-    }
-
-  
-
-    .contact-info h3 {
-        font-size: 2.5rem;
-    }
-
-    .footer-content {
-        text-align: center;
-    }
-
-    .social-links {
-        justify-content: center;
-    }
-}
-
-/* Form Focus States */
-.contact-form input:focus,
-.contact-form textarea:focus {
-    outline: 2px solid #3b82f6;
-    border-color: #3b82f6;
-    box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.2); /* This creates a subtle ring effect */
-}
-
-/* Accessibility */
-@media (prefers-reduced-motion: reduce) {
-    * {
-        animation-duration: 0.01ms !important;
-        animation-iteration-count: 1 !important;
-        transition-duration: 0.01ms !important;
-        scroll-behavior: auto !important;
-    }
-}
     
 
 /* Footer */
@@ -741,12 +539,6 @@
       margin: 0 auto;
   }
   
-  @media (min-width: 768px) {
-      .footer-content {
-          grid-template-columns: repeat(3, 1fr);
-      }
-  }
-  
   .social-links {
       display: flex;
       gap: 1rem;
@@ -761,50 +553,152 @@
       color: #9ca3af;
   }
   
-  .footer-bottom {text-align: center;
+  .footer-bottom {
+    text-align: center;
     margin-top: 2rem;
     padding-top: 2rem;
     border-top: 1px solid #374151;
 }
 
-.footer-section h3 {
-    font-size: 1.125rem;
-    font-weight: bold;
-    margin-bottom: 1rem;
+
+@media (min-width: 768px) {
+    .stats-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .services-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .testimonials-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .contact-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .footer-content {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
 }
 
-.footer-section p {
-    color: #9ca3af;
-    margin-bottom: 0.5rem;
-}
+@media (max-width: 768px) {
+        .nav-toggle {
+            display: block;
+        }
+    
+        .nav {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            right: 0;
+            background-color: var(--primary-color);
+            flex-direction: column;
+            padding: var(--spacing-md);
+        }
+    
+        .nav.active {
+            display: flex;
+        }
 
-/* Counter Animation */
-.counter {
-    display: inline-block;
-    transition: transform 0.3s ease;
-}
+        .services-grid {
+            display: flex;
+            flex-direction: column;
+        }
 
-.counter:hover {
-    transform: scale(1.1);
-}
+        .hero {
+            min-height: 50vh;
+            background-size: cover;
+            display: flex;
+            justify-content: left;
+            align-items: left;
+            text-align: left;
+            padding: 2rem 1rem;
+        }
+    
+        .cont {
+            padding: 2rem;
+            text-align: left;
+            align-items: left;
+            background-color: rgba(0, 0, 0, 0.8);
+        }
+    
+        .cont img {
+            max-width: 0%;
+            height: auto;
+            position: static;
+            margin-bottom: 1rem;
+            align-items: center;
+        }
+    
+        .cont h1 {
+            font-size: 2rem;
+        }
+    
+        .cont h2 {
+            font-size: 1.25rem;
+        }
+    
+        .cont p {
+            font-size: 1rem;
+        }
+    
+        .buttons {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+    
+        .buttons a {
+            width: 100%;
+            text-align: center;
+        }
+    }
 
-/* Custom Scrollbar */
-::-webkit-scrollbar {
-    width: 12px;
-}
+    
+    
+    
+    @keyframes fadeIn {
+        from { opacity: 0; }
+        to { opacity: 1; }
+    }
+    
+    .fade-in {
+        animation: fadeIn 1s ease-out;
+    }
+    
 
-::-webkit-scrollbar-track {
-    background: #f1f1f1;
-}
 
-::-webkit-scrollbar-thumb {
-    background: #888;
-    border-radius: 6px;
-}
+    /* Counter Animation */
+    .counter {
+        display: inline-block;
+        transition: transform 0.3s ease;
+    }
 
-::-webkit-scrollbar-thumb:hover {
-    background: #555;
-}
+    .counter:hover {
+        transform: scale(1.1);
+    }
+
+    /* Custom Scrollbar */
+    ::-webkit-scrollbar {
+        width: 12px;
+    }
+
+    ::-webkit-scrollbar-track {
+        background: #f1f1f1;
+    }
+
+    ::-webkit-scrollbar-thumb {
+        background: #888;
+        border-radius: 6px;
+    }
+
+    ::-webkit-scrollbar-thumb:hover {
+        background: #555;
+    }
 </style>
 </head>
 <body class="bg-gray-100">
@@ -830,14 +724,14 @@
 </header>
   <!-- Hero Section -->
  
-  <section id="inicio">
+  <section class ="hero"id="inicio">
     <div class="cont">
         <div class="img">
             <img 
                 src="./static/img/img2.png" 
                 alt="Logo de Trujillo y Asociados con un diseño de balanza de justicia"
             />
-        </div>
+        </div class="text">
         <h1>Trujillo y Asociados Law Group<h1>
         <h2>Protegemos tus derechos con experiencia y compromiso</h2>
         <p>Especialistas en divorcios, derecho comercial, derecho civil, procesos ejecutivos y accidentes de tránsito</p>
@@ -970,30 +864,126 @@
         </div>
     </div>
 </section>
-
-  <section id="testimonios" class="testimonials-section">
-      <h2>Lo que dicen nuestros clientes</h2>
-      <div class="testimonials-grid">
-          <div class="testimonial-card">
-              <div class="testimonial-text">"Excelente servicio y profesionalismo, me guiaron en todo el proceso con mucha paciencia."</div>
-              <div class="testimonial-author">
-                  <img src="https://placehold.co/50x50" alt="Cliente">
-                  <div>
-                      <h4>Ana López</h4>
-                      <div class="rating">
-                          <span>★</span>
-                          <span>★</span>
-                          <span>★</span>
-                          <span>★</span>
-                          <span class="inactive">★</span>
-                      </div>
-                  </div>
-              </div>
+<section class="py-12 bg-pink-100" id="testimonios">
+    <div class="container mx-auto px-4">
+     <h2 class="text-3xl font-bold text-center mb-8">
+      Lo que dicen nuestros clientes
+     </h2>
+     <div class="relative">
+      <div class="carousel">
+       <div class="carousel-item bg-white p-6 rounded-lg shadow-md">
+        <div class="mb-4 text-gray-700 text-center">
+         "Excelente servicio y profesionalismo, me guiaron en todo el proceso con mucha paciencia."
+        </div>
+        <div class="flex items-center justify-center">
+         <img alt="Retrato de Ana López, cliente satisfecha" class="w-12 h-12 rounded-full mr-4" height="50" src="https://storage.googleapis.com/a1aa/image/M5AmUXcCzTOT57m5xS_oLO2K4xXOpxwmBgy-EKLKFv8.jpg" width="50"/>
+         <div>
+          <h4 class="font-bold text-gray-700 text-center">
+           Ana López
+          </h4>
+          <div class="text-yellow-500 text-center">
+           <i class="fas fa-star">
+           </i>
+           <i class="fas fa-star">
+           </i>
+           <i class="fas fa-star">
+           </i>
+           <i class="fas fa-star">
+           </i>
+           <i class="fas fa-star text-gray-300">
+           </i>
           </div>
-      </div>  
+         </div>
+        </div>
+       </div>
+       <div class="carousel-item bg-white p-6 rounded-lg shadow-md">
+        <div class="mb-4 text-gray-700 text-center">
+         "Muy satisfecho con la atención recibida, resolvieron todas mis dudas de manera eficiente."
+        </div>
+        <div class="flex items-center justify-center">
+         <img alt="Retrato de Juan Pérez, cliente satisfecho" class="w-12 h-12 rounded-full mr-4" height="50" src="https://storage.googleapis.com/a1aa/image/24ZFG0yCTGCEneYhWGTrCY9iQ4mC70FPS8tPiKdunaA.jpg" width="50"/>
+         <div>
+          <h4 class="font-bold text-gray-700 text-center">
+           Juan Pérez
+          </h4>
+          <div class="text-yellow-500 text-center">
+           <i class="fas fa-star">
+           </i>
+           <i class="fas fa-star">
+           </i>
+           <i class="fas fa-star">
+           </i>
+           <i class="fas fa-star">
+           </i>
+           <i class="fas fa-star">
+           </i>
+          </div>
+         </div>
+        </div>
+       </div>
+       <div class="carousel-item bg-white p-6 rounded-lg shadow-md">
+        <div class="mb-4 text-gray-700 text-center">
+         "Un equipo muy profesional y atento, me ayudaron en todo momento."
+        </div>
+        <div class="flex items-center justify-center">
+         <img alt="Retrato de María García, cliente satisfecha" class="w-12 h-12 rounded-full mr-4" height="50" src="https://storage.googleapis.com/a1aa/image/vlXN6vzP6qGTbL2G2SE-tqkbGeS2lKgK3EBDK6sLoJ8.jpg" width="50"/>
+         <div>
+          <h4 class="font-bold text-gray-700 text-center">
+           María García
+          </h4>
+          <div class="text-yellow-500 text-center">
+           <i class="fas fa-star">
+           </i>
+           <i class="fas fa-star">
+           </i>
+           <i class="fas fa-star">
+           </i>
+           <i class="fas fa-star">
+           </i>
+           <i class="fas fa-star text-gray-300">
+           </i>
+          </div>
+         </div>
+        </div>
+       </div>
+       <div class="carousel-item bg-white p-6 rounded-lg shadow-md">
+        <div class="mb-4 text-gray-700 text-center">
+         "Servicio rápido y eficiente, muy recomendable."
+        </div>
+        <div class="flex items-center justify-center">
+         <img alt="Retrato de Carlos Martínez, cliente satisfecho" class="w-12 h-12 rounded-full mr-4" height="50" src="https://storage.googleapis.com/a1aa/image/5LFKxR7Cr-mcE3Z7QCAfHSEzhlEYV2xNdW2Ao18PjSo.jpg" width="50"/>
+         <div>
+          <h4 class="font-bold text-gray-700 text-center">
+           Carlos Martínez
+          </h4>
+          <div class="text-yellow-500 text-center">
+           <i class="fas fa-star">
+           </i>
+           <i class="fas fa-star">
+           </i>
+           <i class="fas fa-star">
+           </i>
+           <i class="fas fa-star">
+           </i>
+           <i class="fas fa-star text-gray-300">
+           </i>
+          </div>
+         </div>
+        </div>
+       </div>
+      </div>
+      <button class="absolute top-1/2 left-0 transform -translate-y-1/2 bg-gray-800 text-white p-2 rounded-full" onclick="prevSlide()">
+       <i class="fas fa-chevron-left">
+       </i>
+      </button>
+      <button class="absolute top-1/2 right-0 transform -translate-y-1/2 bg-gray-800 text-white p-2 rounded-full" onclick="nextSlide()">
+       <i class="fas fa-chevron-right">
+       </i>
+      </button>
+     </div>
     </div>
-  </section>
-
+   </section>
+  
   <section id="contacto" class="contact-section">
       <div class="container">
           <h2>Contáctanos</h2>
@@ -1204,6 +1194,28 @@ document.getElementById('contactForm').addEventListener('submit', async function
         responseMessage.textContent = 'Error al conectar con el servidor.';
     }
 });
+
+    let currentIndex = 0;
+    const items = document.querySelectorAll('.carousel-item');
+    const totalItems = items.length;
+
+    function updateCarousel() {
+        items.forEach((item, index) => {
+            item.style.transform = `translateX(-${currentIndex * 100}%)`;
+        });
+        }
+
+        function nextSlide() {
+        currentIndex = (currentIndex + 1) % totalItems;
+        updateCarousel();
+        }
+
+        function prevSlide() {
+        currentIndex = (currentIndex - 1 + totalItems) % totalItems;
+        updateCarousel();
+        }
+
+        setInterval(nextSlide, 3000);
 </script>
 
 </body>
