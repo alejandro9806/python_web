@@ -1,0 +1,1263 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>Trujillo y Asociados Law Group | Especialistas en Divorcios y Accidentes de Tránsito</title>
+    <link rel="shortcut icon" href="./static/img/Logo.png" type="/image/x-icon">
+    <meta content="Trujillo y Asociados: Servicios legales en divorcios, derecho comercial, accidentes de tránsito, y más. Contacte para una consulta gratuita." name="description"/>
+    <meta content="abogados, derecho, divorcios, accidentes, consulta legal gratuita, asesoria legal, SIC, Industria y Comercio" name="keywords"/>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&amp;family=Open+Sans:wght@400;600&amp;display=swap" rel="stylesheet"/>
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.js"></script>
+    <style>
+
+    :root {
+        --primary-color: #4a4a4a;
+        --secondary-color: #3a3a3a;
+        --accent-color: #2563eb;
+        --text-light: #ffffff;
+        --text-dark: #1f2937;
+        --bg-highlight: url('./static/img/fondo.jpg') no-repeat center center/cover;
+        --spacing-sm: 0.5rem;
+        --spacing-md: 1rem;
+        --spacing-lg: 2rem;
+    }
+    
+    body {
+        font-family: 'Open Sans', sans-serif;
+        line-height: 1.6;
+        color: var(--text-dark);
+    }
+
+    section {
+        background: var(--bg-highlight);
+        color: var(--text-light);
+    }
+    
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    
+    
+    .header {
+        background-color: var(--primary-color);
+        color: var(--text-light);
+        position: fixed;
+        width: 100%;
+        top: 0;
+        z-index: 1000;
+        transition: top 0.3s;
+    }
+    
+    .header-container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 1rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    
+    .logo {
+        display: flex;
+        align-items: center;
+        gap: var(--spacing-sm);
+    }
+    
+    .logo img {
+        height: 40px;
+    }
+    
+    .nav-toggle {
+        display: none;
+        background: none;
+        border: none;
+        color: var(--text-light);
+        font-size: 1.5rem;
+        cursor: pointer;
+    }
+    
+    .nav {
+        display: flex;
+        gap: var(--spacing-md);
+    }
+    
+    .nav a {
+        color: var(--text-light);
+        text-decoration: none;
+        padding: 0.5rem 1rem;
+        transition: color 0.3s;
+    }
+    
+    .nav a:hover, .nav a.active {
+        color: var(--accent-color);
+    }
+    
+    .nav a.active {
+        font-weight: bold;
+        border-bottom: 2px solid var(--accent-color);
+    }
+    
+    .hero {
+        background: url('./static/img/hero2.png') no-repeat center center/cover;
+            height: 100vh;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 2rem 1rem;
+        
+        
+    }
+    
+    .cont {
+        background-color: rgba(0, 0, 0, 0.5);
+        padding: 4rem;
+        border-radius: 6px;
+        height: 100vh;
+        position: relative;
+        z-index: 10;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+        text-align: left;
+    }
+    
+    .cont img {
+        position: absolute;
+        max-width: 35%;
+        top: 0;
+        right: 25px;
+        height: 100vh;
+        border: 15px solid rgba(0,0,0,0.5);
+        border-radius: 20%;
+    }
+    
+    .cont h1 {
+        font-size: 3rem;
+        font-weight: bold;
+    }
+    
+    .cont h2 {
+        margin-top: 1.5rem;
+        font-size: 1.5rem;
+    }
+    
+    .cont p {
+        margin-top: 1.25rem;
+        font-size: 0.875rem;
+    }
+    
+    .buttons {
+        margin-top: 1.5rem;
+    }
+    
+    .buttons a {
+        display: inline-block;
+        margin-right: 1rem;
+        padding: 0.5rem 1rem;
+        font-weight: bold;
+        border-radius: 0.375rem;
+        text-decoration: none;
+        color: black;
+    }
+    
+    .buttons .btn-consulta {
+        background-color: #38b2ac;
+    }
+    
+    .buttons .btn-servicios {
+        background-color: #4299e1;
+    }
+    
+    .buttons a:hover {
+        opacity: 0.8;
+    }
+    
+  .stats-section {
+      background-color: #f3f4f6;
+      padding: 3rem 1rem;
+  }
+  
+  .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(1, 1fr);
+      gap: 2rem;
+      margin-bottom: 3rem;
+  }
+  
+  .stat-card {
+      background-color: white;
+      padding: 1.5rem;
+      border-radius: 0.5rem;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      text-align: center;
+  }
+  
+  .stat-number {
+      font-size: 2.5rem;
+      font-weight: bold;
+      color: black;
+      margin-bottom: 0.5rem;
+  }
+
+  .stat-card p{
+    font-weight: bold;
+    color: black;
+  }
+
+  .whatsapp-cta {
+      text-align: center;
+  }
+  
+  .whatsapp-button {
+      display: inline-flex;
+      align-items: center;
+      padding: 1rem 2rem;
+      background-color: #25d366;
+      color: white;
+      border-radius: 0.5rem;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 1.25rem;
+      transition: all 0.3s ease;
+  }
+  
+  .whatsapp-button:hover {
+      background-color: #128c7e;
+      transform: scale(1.05);
+  }
+  
+  .whatsapp-button i {
+      margin-right: 0.5rem;
+  }
+  
+  /* Services Section */
+  .services-section {
+      padding: 4rem 1rem;
+  }
+  
+  .services-section h2 {
+      text-align: center;
+      font-size: 1.875rem;
+      color: #F0Fcff;
+      margin-bottom: 3rem;
+  }
+  
+  .services-grid {
+    display: grid;
+    grid-template-areas:
+  "comercial comercial divorcios"
+  "civil ejecutivos accidentes";
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 20px; /* Añade espacio entre filas y columnas */
+    
+}
+  
+    .service-card {
+    position: relative;
+    height: 300px;
+    overflow: hidden;
+    border-radius: 8px;
+    transition: transform 0.3s;
+    border: 15px solid rgba(255,255,255,0.5);
+
+    }
+
+    .service-card.large {
+        grid-column: span 2;
+    }
+
+    .service-card img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .overlay {
+        position: absolute;
+        inset: 0;
+        background-color: rgba(0, 0, 0, 0.5);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: opacity 0.3s;
+    }
+
+    .overlay .content {
+        color: white;
+        text-align: center;
+        padding: 2rem;
+    }
+
+    .overlay i {
+        font-size: 2.5rem;
+        margin-bottom: 1rem;
+    }
+    .service-card:hover {
+        transform: translateY(-5px);
+    }
+
+    .service-card:hover i {
+        transform: scale(1.2);
+    }
+
+    /* Áreas específicas para el collage */
+    .service-card:nth-child(1) {
+        grid-area: comercial;
+    }
+
+    .service-card:nth-child(2) {
+        grid-area: divorcios;
+    }
+
+    .service-card:nth-child(3) {
+        grid-area: civil;
+    }
+
+    .service-card:nth-child(4) {
+        grid-area: ejecutivos;
+    }
+
+    .service-card:nth-child(5) {
+        grid-area: accidentes;
+    }
+
+    .service-card .overlay .content h3 {
+        font-size: 1.5rem;
+        margin-bottom: 10px;
+        font-weight: bold;
+    }
+
+    .service-card .overlay .content p {
+        font-size: 1rem;
+        opacity: 0;
+        transition: opacity 0.3s ease;
+    }
+
+    .service-card:hover .overlay .content p {
+    opacity: 1;
+    }
+
+    .service-card .buttons {
+    align-items: center;
+    margin-top: 15px;
+    display: flex;
+    gap: 10px;
+    }
+
+    .service-card .btn {
+
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    color: #fff;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+    }
+
+    .service-card .btn-primary {
+    background-color: #007bff;
+    }
+
+    .service-card .btn-primary:hover {
+    background-color: #0056b3;
+    }
+
+    .service-card .btn-secondary {
+    background-color: #28a745;
+    }
+
+    .service-card .btn-secondary:hover {
+    background-color: #1e7e34;
+    }
+    
+  /* Testimonials Section */
+  .testimonials-section {
+      padding: 4rem 1rem;
+      background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7)), url('https://placehold.co/1920x1080');
+      color: white;
+  }
+
+  .testimonials-section h2 {
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 30px;
+    color: #f1efef;
+  }
+ 
+  .testimonials-grid {
+      display: grid;
+      grid-template-columns: repeat(1, 1fr);
+      gap: 2rem;
+  }
+  
+  .testimonial-card {
+      background-color: white;
+      padding: 1.5rem;
+      border-radius: 0.5rem;
+      color: #1a202c;
+  }
+  
+  .testimonial-author {
+      display: flex;
+      align-items: center;
+      margin-top: 1rem;
+  }
+  
+  .testimonial-author img {
+      width: 3rem;
+      height: 3rem;
+      border-radius: 50%;
+      margin-right: 1rem;
+  }
+  
+  .rating span {
+      color: #fbbf24;
+  }
+  
+  .rating span.inactive {
+      color: #d1d5db;
+  }
+  
+
+
+.carousel {
+    display: flex;
+    overflow: hidden;
+    scroll-behavior: smooth;
+  }
+  .carousel-item {
+    min-width: 100%;
+    transition: transform 0.5s ease;
+  }
+
+
+/* Contact Section */
+  .contact-section {
+      padding: 4rem 1rem;
+      background-color: #F0Fcff;
+  }
+
+  .contact-section h2{
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 30px;
+  }
+
+  .contact-section p{
+    font-size: 1.3rem;
+    text-align: center;
+    margin-bottom: 30px;
+  }
+
+
+  .contact-section h3{
+    font-size: 1.5rem;
+    margin-bottom: 30px;
+  }
+  
+  .contact-grid {
+      display: grid;
+      grid-template-columns: repeat(1, 1fr);
+      gap: 3rem;
+  }
+  
+  
+  .contact-form input,
+  .contact-form textarea {
+      width: 100%;
+      padding: 1rem;
+      margin-bottom: 1rem;
+      border: 1px solid #d1d5db;
+      border-radius: 0.375rem;
+      color: black;
+  }
+  
+  .contact-form button {
+      background-color: #3b82f6;
+      color: white;
+      padding: 0.75rem 1.5rem;
+      border: none;
+      border-radius: 0.375rem;
+      cursor: pointer;
+      transition: background-color 0.3s;
+      align-items: center;
+  }
+  
+  .contact-form button:hover {
+      background-color: #2563eb;
+  }
+  
+  .contact-info ul {
+      list-style: none;
+      margin-bottom: 2rem;
+  }
+  
+  .contact-info li {
+      display: flex;
+      align-items: center;
+      margin-bottom: 1.5rem;
+  }
+  
+  .contact-info i {
+      font-size: 1.875rem;
+      margin-right: 1rem;
+  }
+  
+  .contact-info i.fa-whatsapp {
+      color: #25d366;
+  }
+  
+  .contact-info i.fa-envelope {
+      color: #3b82f6;
+  }
+  
+  .contact-info i.fa-map-marker-alt {
+      color: #ef4444;
+  }
+    
+
+/* Footer */
+  footer {
+      background-color: #1a202c;
+      color: white;
+      padding: 2rem 1rem;
+  }
+  
+  .footer-content {
+      display: grid;
+      grid-template-columns: repeat(1, 1fr);
+      gap: 2rem;
+      max-width: 1200px;
+      margin: 0 auto;
+  }
+  
+  .social-links {
+      display: flex;
+      gap: 1rem;
+  }
+  
+  .social-links a {
+      color: white;
+      text-decoration: none;
+  }
+  
+  .social-links a:hover {
+      color: #9ca3af;
+  }
+  
+  .footer-bottom {
+    text-align: center;
+    margin-top: 2rem;
+    padding-top: 2rem;
+    border-top: 1px solid #374151;
+}
+
+
+@media (min-width: 768px) {
+    .stats-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .services-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .testimonials-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .contact-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .footer-content {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .floating-social-icons {
+        position: fixed;
+        top: 50%;
+        right: 0;
+        transform: translateY(-50%);
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        z-index: 1000;
+    }
+
+    .floating-social-icons a {
+        background-color: #1f2937;
+        color: white;
+        padding: 10px;
+        border-radius: 50%;
+        transition: background-color 0.3s ease;
+    }
+
+    .floating-social-icons a:hover {
+        background-color: #3b82f6;
+    }
+
+}
+
+@media (max-width: 768px) {
+        .nav-toggle {
+            display: block;
+        }
+    
+        .nav {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            right: 0;
+            background-color: var(--primary-color);
+            flex-direction: column;
+            padding: var(--spacing-md);
+        }
+    
+        .nav.active {
+            display: flex;
+        }
+
+        .services-grid {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .hero {
+            min-height: 50vh;
+            background-size: cover;
+            display: flex;
+            justify-content: left;
+            align-items: left;
+            text-align: left;
+            padding: 2rem 1rem;
+        }
+    
+        .cont {
+            padding: 2rem;
+            text-align: left;
+            align-items: left;
+            background-color: rgba(0, 0, 0, 0.8);
+        }
+    
+        .cont img {
+            max-width: 0%;
+            height: auto;
+            position: static;
+            margin-bottom: 1rem;
+            align-items: center;
+        }
+    
+        .cont h1 {
+            font-size: 2rem;
+        }
+    
+        .cont h2 {
+            font-size: 1.25rem;
+        }
+    
+        .cont p {
+            font-size: 1rem;
+        }
+    
+        .buttons {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+    
+        .buttons a {
+            width: 100%;
+            text-align: center;
+        }
+    }
+
+    
+    
+    
+    @keyframes fadeIn {
+        from { opacity: 0; }
+        to { opacity: 1; }
+    }
+    
+    .fade-in {
+        animation: fadeIn 1s ease-out;
+    }
+    
+
+
+    /* Counter Animation */
+    .counter {
+        display: inline-block;
+        transition: transform 0.3s ease;
+    }
+
+    .counter:hover {
+        transform: scale(1.1);
+    }
+
+    /* Custom Scrollbar */
+    ::-webkit-scrollbar {
+        width: 12px;
+    }
+
+    ::-webkit-scrollbar-track {
+        background: #f1f1f1;
+    }
+
+    ::-webkit-scrollbar-thumb {
+        background: #888;
+        border-radius: 6px;
+    }
+
+    ::-webkit-scrollbar-thumb:hover {
+        background: #555;
+    }
+</style>
+</head>
+<body class="bg-gray-100">
+
+  <header class="header">
+    <div class="header-container">
+        <div class="logo">
+            <img src="./static/img/TRUJILLO Y ASOCIADOS LAW.png" alt="Logo">
+            <span class="logo-text">Trujillo y Asociados Law Group</span>
+        </div>
+        <button class="nav-toggle" aria-label="Menú">
+            <i class="fas fa-bars"></i>
+        </button>
+        <nav class="nav">
+            <a href="#inicio">Inicio</a>
+            <a href="{{url_for('nosotros')}}">Nosotros</a>
+            <a href="{{url_for('servicios')}}">Servicios</a>
+            <a href="#contacto">Contáctanos</a>
+            <!--<a href="#blog">Blog</a>-->
+            <a class="bg-custom-gray text-white px-4 py-2 rounded hover:bg-gray-700 transition duration-300" href="https://wa.me/573044501171">Consulta Gratis</a>
+        </nav>
+    </div>
+</header>
+  <!-- Hero Section -->
+ 
+  <section class ="hero"id="inicio">
+    <div class="cont">
+        <div class="img">
+            <img 
+                src="./static/img/img2.png" 
+                alt="Logo de Trujillo y Asociados con un diseño de balanza de justicia"
+            />
+        </div class="text">
+        <h1>Trujillo y Asociados Law Group<h1>
+        <h2>Protegemos tus derechos con experiencia y compromiso</h2>
+        <p>Especialistas en divorcios, derecho comercial, derecho civil, procesos ejecutivos y accidentes de tránsito</p>
+        <div class="buttons">
+            <a href="https://wa.me/573044501171" class="btn-consulta">Agenda tu Consulta</a>
+            <a href="#servicios" class="btn-servicios">Conoce Nuestros Servicios</a>
+        </div>
+    </div>
+</section>
+</section>
+</body>
+
+  <section class="stats-section">
+      <div class="container">
+          <div class="stats-grid">
+              <div class="stat-card">
+                  <h3 class="stat-number">
+                      <span class="counter" data-target="50">500</span>+
+                  </h3>
+                  <p>Casos Ganados</p>
+              </div>
+              <div class="stat-card">
+                  <h3 class="stat-number">
+                      <span class="counter" data-target="15">8</span>+
+                  </h3>
+                  <p>Años de Experiencia</p>
+              </div>
+              <div class="stat-card">
+                  <h3 class="stat-number">
+                      <span class="counter" data-target="100">800</span>+
+                  </h3>
+                  <p>Clientes Satisfechos</p>
+              </div>
+          </div>
+          
+          <div class="whatsapp-cta">
+              <a href="https://wa.me/573044501171" target="_blank" class="whatsapp-button">
+                  <i class="fab fa-whatsapp"></i>
+                  Contactar por WhatsApp
+              </a>
+          </div>
+      </div>
+  </section>
+
+   <!-- Sección de Servicios -->
+   <section id="servicios" class="services-section">
+    <div class="container">
+        <h2>Nuestros Servicios</h2>
+        <div class="services-grid">
+            <!-- Derecho Comercial -->
+            <div class="service-card large">
+                <img src="./static/img/Derecho_comercial (1).jpg" alt="Derecho Comercial">
+                <div class="overlay">
+                    <div class="content">
+                        <i class="fas fa-building"></i>
+                        <h3>Derecho Comercial</h3>
+                        <p>Brindamos asesoría legal a consumidores en materia de derecho comercial</p>
+                        <div class="buttons">
+                          <a href="{{url_for('servicios')}}" class="btn btn-primary">Leer más</a>
+                          <a href="https://wa.me/573044501171?text=Hola,%20quiero%20una%20consulta%20gratuita%20sobre%20Derecho%20Comercial." class="btn btn-secondary">Consulta gratis</a>
+                      </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Divorcios -->
+            <div class="service-card">
+                <img src="./static/img/divorcio2.jpg" alt="Divorcios">
+                <div class="overlay">
+                    <div class="content">
+                        <i class="fas fa-gavel"></i>
+                        <h3>Divorcios</h3>
+                        <p>Asesoramiento experto en procesos de divorcio</p>
+                        <div class="buttons">
+                          <a href="{{url_for('servicios')}}" class="btn btn-primary">Leer más</a>
+                          <a href="https://wa.me/573044501171?text=Hola,%20quiero%20una%20consulta%20gratuita%20sobre%20Derecho%20Comercial." class="btn btn-secondary">Consulta gratis</a>
+                      </div>
+                        
+                    </div>
+                </div>
+            </div>
+
+            <!-- Derecho Civil -->
+            <div class="service-card">
+                <img src="./static/img/deecho_civil (1).jpg" alt="Derecho Civil">
+                <div class="overlay">
+                    <div class="content">
+                        <i class="fas fa-balance-scale"></i>
+                        <h3>Derecho Civil</h3>
+                        <p>Representación en casos civiles y litigios</p>
+                        <div class="buttons">
+                          <a href="{{url_for('servicios')}}" class="btn btn-primary">Leer más</a>
+                          <a href="https://wa.me/573044501171?text=Hola,%20quiero%20una%20consulta%20gratuita%20sobre%20Derecho%20Civil." class="btn btn-secondary" class="btn btn-secondary">Consulta gratis</a>
+                      </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Procesos Ejecutivos -->
+            <div class="service-card">
+                <img src="./static/img/Procesos_ejecutivos (1).jpg" alt="Procesos Ejecutivos">
+                <div class="overlay">
+                    <div class="content">
+                        <i class="fas fa-file-contract"></i>
+                        <h3>Procesos Ejecutivos</h3>
+                        <p>Gestión eficiente de procesos ejecutivos</p>
+                        <div class="buttons">
+                          <a href="{{url_for('servicios')}}" class="btn btn-primary">Leer más</a>
+                          <a href="https://wa.me/573044501171?text=Hola,%20quiero%20una%20consulta%20gratuita%20sobre%20un%20Proceso%20Ejecutivo." class="btn btn-secondary" class="btn btn-secondary">Consulta gratis</a>
+                      </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Accidentes de Tránsito -->
+            <div class="service-card large">
+                <img src="./static/img/Accidentes_de_transito.jpg" alt="Accidentes de Tránsito">
+                <div class="overlay">
+                    <div class="content">
+                        <i class="fas fa-car-crash"></i>
+                        <h3>Accidentes de Tránsito</h3>
+                        <p>Asistencia legal en accidentes y seguros</p>
+                        <div class="buttons">
+                          <a href="{{url_for('servicios')}}" class="btn btn-primary">Leer más</a>
+                          <a href="https://wa.me/573044501171?text=Hola,%20quiero%20una%20consulta%20gratuita%20sobre%20Accidente%20de%20Transito." class="btn btn-secondary" class="btn btn-secondary">Consulta gratis</a>
+                      </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="py-12 bg-pink-100" id="testimonios">
+    <div class="container mx-auto px-4">
+     <h2 class="text-3xl font-bold text-center mb-8">
+      Lo que dicen nuestros clientes
+     </h2>
+     <div class="relative">
+      <div class="carousel">
+       <div class="carousel-item bg-white p-6 rounded-lg shadow-md">
+        <div class="mb-4 text-gray-700 text-center">
+         "Excelente servicio y profesionalismo, me guiaron en todo el proceso con mucha paciencia."
+        </div>
+        <div class="flex items-center justify-center">
+         <img alt="Retrato de Ana López, cliente satisfecha" class="w-12 h-12 rounded-full mr-4" height="50" src="https://storage.googleapis.com/a1aa/image/M5AmUXcCzTOT57m5xS_oLO2K4xXOpxwmBgy-EKLKFv8.jpg" width="50"/>
+         <div>
+          <h4 class="font-bold text-gray-700 text-center">
+           Ana López
+          </h4>
+          <div class="text-yellow-500 text-center">
+           <i class="fas fa-star">
+           </i>
+           <i class="fas fa-star">
+           </i>
+           <i class="fas fa-star">
+           </i>
+           <i class="fas fa-star">
+           </i>
+           <i class="fas fa-star text-gray-300">
+           </i>
+          </div>
+         </div>
+        </div>
+       </div>
+       <div class="carousel-item bg-white p-6 rounded-lg shadow-md">
+        <div class="mb-4 text-gray-700 text-center">
+         "Muy satisfecho con la atención recibida, resolvieron todas mis dudas de manera eficiente."
+        </div>
+        <div class="flex items-center justify-center">
+         <img alt="Retrato de Juan Pérez, cliente satisfecho" class="w-12 h-12 rounded-full mr-4" height="50" src="https://storage.googleapis.com/a1aa/image/24ZFG0yCTGCEneYhWGTrCY9iQ4mC70FPS8tPiKdunaA.jpg" width="50"/>
+         <div>
+          <h4 class="font-bold text-gray-700 text-center">
+           Juan Pérez
+          </h4>
+          <div class="text-yellow-500 text-center">
+           <i class="fas fa-star">
+           </i>
+           <i class="fas fa-star">
+           </i>
+           <i class="fas fa-star">
+           </i>
+           <i class="fas fa-star">
+           </i>
+           <i class="fas fa-star">
+           </i>
+          </div>
+         </div>
+        </div>
+       </div>
+       <div class="carousel-item bg-white p-6 rounded-lg shadow-md">
+        <div class="mb-4 text-gray-700 text-center">
+         "Un equipo muy profesional y atento, me ayudaron en todo momento."
+        </div>
+        <div class="flex items-center justify-center">
+         <img alt="Retrato de María García, cliente satisfecha" class="w-12 h-12 rounded-full mr-4" height="50" src="https://storage.googleapis.com/a1aa/image/vlXN6vzP6qGTbL2G2SE-tqkbGeS2lKgK3EBDK6sLoJ8.jpg" width="50"/>
+         <div>
+          <h4 class="font-bold text-gray-700 text-center">
+           María García
+          </h4>
+          <div class="text-yellow-500 text-center">
+           <i class="fas fa-star">
+           </i>
+           <i class="fas fa-star">
+           </i>
+           <i class="fas fa-star">
+           </i>
+           <i class="fas fa-star">
+           </i>
+           <i class="fas fa-star text-gray-300">
+           </i>
+          </div>
+         </div>
+        </div>
+       </div>
+       <div class="carousel-item bg-white p-6 rounded-lg shadow-md">
+        <div class="mb-4 text-gray-700 text-center">
+         "Servicio rápido y eficiente, muy recomendable."
+        </div>
+        <div class="flex items-center justify-center">
+         <img alt="Retrato de Carlos Martínez, cliente satisfecho" class="w-12 h-12 rounded-full mr-4" height="50" src="https://storage.googleapis.com/a1aa/image/5LFKxR7Cr-mcE3Z7QCAfHSEzhlEYV2xNdW2Ao18PjSo.jpg" width="50"/>
+         <div>
+          <h4 class="font-bold text-gray-700 text-center">
+           Carlos Martínez
+          </h4>
+          <div class="text-yellow-500 text-center">
+           <i class="fas fa-star">
+           </i>
+           <i class="fas fa-star">
+           </i>
+           <i class="fas fa-star">
+           </i>
+           <i class="fas fa-star">
+           </i>
+           <i class="fas fa-star text-gray-300">
+           </i>
+          </div>
+         </div>
+        </div>
+       </div>
+      </div>
+      <button class="absolute top-1/2 left-0 transform -translate-y-1/2 bg-gray-800 text-white p-2 rounded-full" onclick="prevSlide()">
+       <i class="fas fa-chevron-left">
+       </i>
+      </button>
+      <button class="absolute top-1/2 right-0 transform -translate-y-1/2 bg-gray-800 text-white p-2 rounded-full" onclick="nextSlide()">
+       <i class="fas fa-chevron-right">
+       </i>
+      </button>
+     </div>
+    </div>
+   </section>
+  
+  <section id="contacto" class="contact-section">
+      <div class="container">
+          <h2>Contáctanos</h2>
+          <p class="contact-intro">Si tienes alguna consulta o deseas más información, puedes ponerte en contacto con nosotros a través del siguiente formulario.</p>
+          
+          <div class="contact-grid">
+            <div class="contact-form">
+                <form id="contactForm">
+                    <input type="text" name="name" id="name" placeholder="Tu nombre completo" required>
+                    <input type="email" name="email" id="email" placeholder="Tu correo" required>
+                    <input type="tel" name="telefono" id="telefono" placeholder="Celular Ej: 3044501171" pattern="[+0-9]{10,15}" required>
+                    <textarea name="message" id="message" rows="5" placeholder="Tu mensaje" required></textarea>
+                    <button type="submit">Enviar</button>
+                </form>
+                <p id="responseMessage" style="display:none; margin-top:10px;"></p>
+
+              </div>
+              
+              <div class="contact-info">
+                  <h3>Información de Contacto</h3>
+                  <ul>
+                      <li>
+                          <i class="fab fa-whatsapp"></i>
+                          <a class="hover:text-blue-600 transition duration-300"href="https://wa.me/573044501171" target="_blank">+57 3044501171</a>
+                      </li>
+                      <li>
+                          <i class="fas fa-envelope"></i>
+                          <a >
+                            asesorias@grupotrujilloyasociados.com</a>
+                      </li>
+                      <li>
+                          <i class="fas fa-map-marker-alt"></i>
+                          <a class="hover:text-blue-600 transition duration-300" href="https://www.google.com/maps/place/Cl.+16a+%2326-31,+Manizales,+Caldas/@5.064678,-75.5212047,17z/data=!3m1!4b1!4m5!3m4!1s0x8e476ff9256a61a1:0x8a3a102f779dd2e7!8m2!3d5.064678!4d-75.5212047?entry=ttu&g_ep=EgoyMDI1MDEyOC4wIKXMDSoASAFQAw%3D%3D">Calle 16A #26-31, Manizales, Caldas</a>
+                      </li>
+                  </ul>
+                  
+                  <h3>Nuestra Ubicación</h3>
+                  <div class="map-container">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3974.2409791445!2d-75.5209888!3d5.064646499999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e476ff9256a61a1%3A0x60cc3d60e92d0042!2sCl.%2016a%20%2326-31%2C%20Manizales%2C%20Caldas!5e0!3m2!1ses-419!2sco!4v1739234951084!5m2!1ses-419!2sco" width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </section>
+
+  <footer>
+      <div class="footer-content">
+          <div class="footer-section">
+              <h3>Trujillo y Asociados Law Group</h3>
+              <p>Excelencia legal a su servicio</p>
+          </div>
+          <div class="footer-section">
+              <h3>Contacto</h3>
+              <p>asesorias@grupotrujilloyasociados.com</p>
+              <p>+57 304 450 1171</p>
+          </div>
+          <div class="footer-section">
+              <h3>Síguenos</h3>
+              <div class="social-links">
+                  <a href="https://www.facebook.com/profile.php?id=61566632199333"><i class="fab fa-facebook"></i> Facebook</a>
+                  <!--<a href=""><i class="fab fa-linkedin"></i> LinkedIn</a>
+                  <a href="#"><i class="fab fa-twitter"></i> Twitter</a>-->
+              </div>
+          </div>
+      </div>
+      <div class="footer-bottom">
+          <p>© 2025 Trujillo y Asociados Law Group. Todos los derechos reservados.</p>
+      </div>
+  </footer>
+ <!-- <div class="floating-social-icons">
+    <a href="https://www.facebook.com/profile.php?id=61566632199333">
+     <i class="fab fa-facebook-f">
+     </i>
+    </a>
+    <a href="#">
+     <i class="fab fa-twitter">
+     </i>
+    </a>
+    <a href="#">
+     <i class="fab fa-linkedin-in">
+     </i>
+    </a>
+    <a href="#">
+     <i class="fab fa-instagram">
+     </i>
+    </a>-->
+   </div>
+  <script>
+    // Navegación responsive
+    const navToggle = document.querySelector('.nav-toggle');
+    const nav = document.querySelector('.nav');
+
+    navToggle.addEventListener('click', () => {
+        nav.classList.toggle('active');
+    });
+
+
+    // Animaciones al hacer scroll
+    const observerOptions = {
+        root: null,
+        rootMargin: '0px',
+        threshold: 0.1
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('fade-in');
+                observer.unobserve(entry.target);
+            }
+        });
+    }, observerOptions);
+
+    // Observar elementos que queremos animar
+    document.querySelectorAll('.service-card, .contact-form').forEach(el => {
+        observer.observe(el);
+    });
+
+    // Smooth scroll para navegación
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+            const targetId = this.getAttribute('href');
+            document.querySelector(targetId).scrollIntoView({
+                behavior: 'smooth'
+            });
+            if (nav.classList.contains('active')) {
+                nav.classList.remove('active');
+            }
+        });
+    });
+
+    // Validación de formulario
+    const form = document.querySelector('.contact-form');
+    if (form) {
+        form.addEventListener('submit', (e) => {
+            e.preventDefault();
+            // Aquí iría la lógica de validación y envío
+            console.log('Formulario enviado');
+        });
+    }
+
+    // Lazy loading para imágenes
+    document.addEventListener("DOMContentLoaded", function() {
+        const lazyImages = document.querySelectorAll('img[data-src]');
+        const imageObserver = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const img = entry.target;
+                    img.src = img.dataset.src;
+                    img.removeAttribute('data-src');
+                    observer.unobserve(img);
+                }
+            });
+        });
+
+        lazyImages.forEach(img => imageObserver.observe(img));
+    });
+
+    document.addEventListener('DOMContentLoaded', () => {
+    const sections = document.querySelectorAll('section');
+    const navLinks = document.querySelectorAll('.nav a');
+
+    const updateActiveLink = () => {
+        let currentSection = '';
+        sections.forEach(section => {
+            const sectionTop = section.offsetTop - 50; // Ajuste para altura del header
+            const sectionHeight = section.offsetHeight;
+            if (window.scrollY >= sectionTop && window.scrollY < sectionTop + sectionHeight) {
+                currentSection = section.getAttribute('id');
+            }
+        });
+
+        navLinks.forEach(link => {
+            link.classList.remove('active');
+            if (link.getAttribute('href').includes(currentSection)) {
+                link.classList.add('active');
+            }
+        });
+    };
+
+    window.addEventListener('scroll', updateActiveLink);
+});
+
+document.getElementById('contactForm').addEventListener('submit', async function (e) {
+    e.preventDefault(); // Evitar la recarga de la página
+
+    // Obtener datos del formulario
+    const name = document.getElementById('name').value;
+    const telefono = document.getElementById('telefono').value;
+    const email = document.getElementById('email').value;
+    const message = document.getElementById('message').value;
+
+    // Mostrar mensaje de carga
+    const responseMessage = document.getElementById('responseMessage');
+    responseMessage.style.display = 'block';
+    responseMessage.style.color = 'blue';
+    responseMessage.textContent = 'Enviando mensaje...';
+
+    try {
+        // Enviar datos al backend
+        const response = await fetch('https://python-web-1pt8.onrender.com/send-email', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/x-www-form-urlencoded',
+            },
+            body: new URLSearchParams({ name, email, telefono, message }),
+        });
+
+        const result = await response.json();
+
+        if (response.ok) {
+            // Mostrar mensaje de éxito
+            responseMessage.style.color = 'green';
+            responseMessage.textContent = 'Mensaje enviado exitosamente.';
+            
+            // Limpiar campos del formulario
+            document.getElementById('contactForm').reset();
+        } else {
+            // Mostrar mensaje de error
+            responseMessage.style.color = 'red';
+            responseMessage.textContent = result.error || 'Ocurrió un error al enviar el mensaje.';
+        }
+    } catch (error) {
+        responseMessage.style.color = 'red';
+        responseMessage.textContent = 'Error al conectar con el servidor.';
+    }
+});
+
+    let currentIndex = 0;
+    const items = document.querySelectorAll('.carousel-item');
+    const totalItems = items.length;
+
+    function updateCarousel() {
+        items.forEach((item, index) => {
+            item.style.transform = `translateX(-${currentIndex * 100}%)`;
+        });
+        }
+
+        function nextSlide() {
+        currentIndex = (currentIndex + 1) % totalItems;
+        updateCarousel();
+        }
+
+        function prevSlide() {
+        currentIndex = (currentIndex - 1 + totalItems) % totalItems;
+        updateCarousel();
+        }
+
+        setInterval(nextSlide, 3000);
+</script>
+</body>
+</html>
